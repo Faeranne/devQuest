@@ -1,5 +1,4 @@
 engine = (typeof engine === 'undefined') ? {} : engine;
-engine.assetsLoad = function(){
 
 	engine.assets = {}
 
@@ -26,7 +25,7 @@ engine.assetsLoad = function(){
 
         engine.assets.preload = function(assets){
           for(item in assets){
-	      engine[assets[item].type].store(assets[item].id,assets[item].src);
+	      engine.assets.set(assets[item].id,assets[item].src);
 	  }
 	  while(!engine.assets.done()){
 	   var progress = engine.assets.progress();
@@ -35,4 +34,20 @@ engine.assetsLoad = function(){
           }
           return;
         }
-}
+       
+	engine.assets.images = {}
+
+	engine.assets.set = function(id,src){
+	  var newAsset = engine.assets.loaded.length;
+	  engine.assets.loaded[newAsset]=false;
+	  var image = new Image()
+	  image.src = src
+	  image.onload = function(){
+	    engine.assets.loaded[newAsset] = true;
+	  }
+	  engine.assets.images[id] = image;
+	}
+
+	engine.assets.get = function(id){
+	  return engine.assets.images[id];
+	}

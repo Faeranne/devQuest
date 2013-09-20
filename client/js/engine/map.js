@@ -10,9 +10,9 @@ engine = (typeof engine === 'undefined') ? {} : engine;
 	  var mapY = 0;
 	  var tile;
 	  
-	  for(j=0; j<engine.screen.tilesY; j++)
+	  for(j=-1; j<engine.screen.tilesY+1; j++)
 	  {
-	    for(i=0; i<engine.screen.tilesX; i++)
+	    for(i=-1; i<engine.screen.tilesX+1; i++)
 	    {
 	      mapX = i + engine.viewport.x;
 	      mapY = j + engine.viewport.y;
@@ -39,17 +39,24 @@ engine = (typeof engine === 'undefined') ? {} : engine;
 	}
 
 	engine.tile = {};
-	engine.tile.images = {};
+
+	engine.tile.offsetX = 0;
+	engine.tile.offsetY = 0;
+	//engine.tile.images = {};
 
 	engine.tile.draw = function(x, y, tile){
 
-	  engine.handle.drawImage(engine.tile.retrieve(tile.ground), x * 16, y * 16);
+	var rx = x * 16 + engine.tile.offsetX;
+	var ry = y * 16 + engine.tile.offsetY;
+	
+
+	  engine.handle.drawImage(engine.assets.get(tile.ground), rx, ry);
           if(tile.item){
-	    engine.handle.drawImage(engine.tile.retrieve(tile.item), x*16, y*16)
+	    engine.handle.drawImage(engine.assets.get(tile.item), rx, ry);
 	  }
 	};
 
-	engine.tile.store = function(id, imgSrc){
+	/*engine.tile.store = function(id, imgSrc){
           var newAsset = engine.assets.loaded.length;
           engine.assets.loaded[newAsset]=false;
 	  var tile = [new Image()]
@@ -64,5 +71,5 @@ engine = (typeof engine === 'undefined') ? {} : engine;
 
 	engine.tile.retrieve = function(id){
 	  return engine.tile.images[id][0];
-	};
+	};*/
 
