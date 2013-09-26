@@ -23,7 +23,7 @@ engine.assets = {}
 	  return progress;
 	}
 
-    engine.assets.preload = function(assets){
+    engine.assets.preload = function(assets,cb){
           for(item in assets){
 	      engine.assets.set(assets[item].id,assets[item].src);
 	  }
@@ -32,7 +32,7 @@ engine.assets = {}
 
 	   console.log('loading percent: '+progress); 
       }
-      return;
+      cb();
     }
        
 	engine.assets.images = {}

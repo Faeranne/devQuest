@@ -36,8 +36,9 @@ var assets = [
 ]
 
 window.onload = function(){
-  engine.assets.preload(assets);
-  engine.start(mapone,0,0);
+  engine.assets.preload(assets,function(){
+    engine.start(mapone,0,0);
+  });
 }
 
 
