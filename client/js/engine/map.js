@@ -1,5 +1,45 @@
 engine = (typeof engine === 'undefined') ? {} : engine;
 
+engine.map = {}
+
+engine.map.nullTile = {gid:0,params:{}}
+/*
+engine.addEventListener('draw',function(e){
+  var map = engine.map.current
+  var i,j;
+  var mapX = mapY = 0;
+  var tile;
+  var x = e.x-engine.tileWidth/2;
+  var y = e.y-engine.tileHeight/2;
+
+  for(j=-1; j < engine.tilesY + 1; j++){
+    for(i=-1; i < engine.tilesY + 1; j++){
+      mapX = i + x;
+      mapY = j + y;
+      
+      tile = engine.map.getTile(mapX,mapY) || engine.map.nullTile
+      
+      engine.map.drawTile(mapX,mapY,tile)
+    }
+  }
+})
+
+engine.map.getTile = function(x,y){
+  if(engine.map.current.tiles[y]&&engine.map.current.tiles[y][x]){
+    var tile = engine.map.current.tiles[y][x]
+    return tile
+  }else{
+    return undefined
+  }
+}
+  
+engine.map.drawTile = function(x,y,tile){
+
+  engine.handler.drawImage(engine.map.sheet,x,y,engine.tilew,engine.tileh,tile.x,tile.y,tile.w,tile.h
+
+}
+*/
+
         engine.tile = {};
         engine.tile.images = {};
 	engine.map = {}
@@ -55,8 +95,8 @@ engine = (typeof engine === 'undefined') ? {} : engine;
 	    engine.handle.drawImage(engine.assets.get(tile.item), rx, ry);
 	  }
 	};
-
-	/*engine.tile.store = function(id, imgSrc){
+/*
+	engine.tile.store = function(id, imgSrc){
           var newAsset = engine.assets.loaded.length;
           engine.assets.loaded[newAsset]=false;
 	  var tile = [new Image()]
@@ -72,4 +112,3 @@ engine = (typeof engine === 'undefined') ? {} : engine;
 	engine.tile.retrieve = function(id){
 	  return engine.tile.images[id][0];
 	};*/
-

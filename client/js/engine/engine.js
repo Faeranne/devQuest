@@ -1,6 +1,5 @@
 engine = (typeof engine === 'undefined') ? {} : engine;
 
-
 engine.start = function(mapData, x, y){
   window.addEventListener('keydown', engine.keyboard.parseInput, false);
   engine.setViewport('canvas');
@@ -39,5 +38,6 @@ var assets = [
 window.onload = function(){
   engine.assets.preload(assets);
 }
+
 
 window.engine = engine

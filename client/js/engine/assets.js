@@ -1,6 +1,6 @@
 engine = (typeof engine === 'undefined') ? {} : engine;
 
-	engine.assets = {}
+engine.assets = {}
 
         engine.assets.loaded = [];
         
@@ -51,3 +51,4 @@ engine = (typeof engine === 'undefined') ? {} : engine;
 	engine.assets.get = function(id){
 	  return engine.assets.images[id];
 	}
+
