@@ -16,6 +16,7 @@ engine.draw = function(){
   engine.player.draw();
 }
 
+
 var assets = [
   {id:'pd1',src:'images/entities/thomas/d-1.png'},          
   {id:'pd2',src:'images/entities/thomas/d-2.png'},          
@@ -28,8 +29,7 @@ var assets = [
   {id:'pl3',src:'images/entities/thomas/l-4.png'},          
   {id:'pu1',src:'images/entities/thomas/u-1.png'},          
   {id:'pu2',src:'images/entities/thomas/u-2.png'},          
-  {id:'pu3',src:'images/entities/thomas/u-4.png'},          
-  {id:'r',src:'images/tiles/rock.png'},          
+  {id:'pu3',src:'images/entities/thomas/u-4.png'},                  
   {id:'r',src:'images/tiles/rock.png'},          
   {id:'g',src:'images/tiles/grass.png'},          
   {id:' ',src:'images/tiles/blank.png'}
@@ -37,6 +37,7 @@ var assets = [
 
 window.onload = function(){
   engine.assets.preload(assets);
+  engine.start(mapone,0,0);
 }
 
 

@@ -1,4 +1,4 @@
-engine = (typeof engine === 'undefined') ? {} : engine;
+var engine = (typeof engine === 'undefined') ? {} : engine;
 
 engine.map = {}
 
@@ -90,9 +90,9 @@ engine.map.drawTile = function(x,y,tile){
 	var ry = y * 16 + engine.tile.offsetY;
 	
 
-	  engine.handle.drawImage(engine.assets.get(tile.ground), rx, ry);
+	  engine.handle.drawImage(engine.assets.get(tile.ground), 0, 0, 32, 32, rx, ry, 16, 16);
           if(tile.item){
-	    engine.handle.drawImage(engine.assets.get(tile.item), rx, ry);
+	    engine.handle.drawImage(engine.assets.get(tile.item), 0, 0, 32, 32, rx, ry, 16, 16);
 	  }
 	};
 /*

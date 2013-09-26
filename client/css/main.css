@@ -1,7 +1,12 @@
+body{
+    background-color: #00ad2a;
+}
+
 canvas#canvas
 {
    border: 1px dotted #f06;
-
+   width: 400px;
+   height: 400px;
    margin-left: 100px;
 }
 
@@ -17,4 +22,12 @@ div#output
 
    background-color: #000;
    color: #fff;
+}
+.center{
+  width: 700px ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+.text{
+    text-align:center;
 }
