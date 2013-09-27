@@ -8,6 +8,23 @@ engine.player.offsetX = 0;
 engine.player.offsetY = 0;
 engine.player.leftLeg = false;
 
+engine.player.activate = function(){
+  var x = engine.viewport.x + (engine.screen.tilesX / 2 - 0.5);
+  var y = engine.viewport.y + (engine.screen.tilesY / 2 - 0.5);
+
+  switch(engine.player.spriteIndex){
+      case 6: y--; break;
+      case 3: x++; break;
+      case 0: y++; break;
+      case 9: x--; break;
+  }
+
+  if(engine.map.currentMap.objects[y] && engine.map.currentMap.objects[y][x] && engine.map.currentMap.objects[y][x].toCall != undefined){
+    console.log(engine.map.currentMap.objects[y][x].toCall)
+    engine.scripts.call[engine.map.currentMap.objects[y][x].toCall](engine.map.currentMap.objects[y][x])
+  }
+}
+    
 engine.player.calcLoc = function(){
   var character = {
     width: Math.ceil(engine.assets.get(engine.player.assets[0]).width),
@@ -43,7 +60,7 @@ engine.player.move = function(direction){
   var toX = engine.viewport.x + (engine.screen.tilesX / 2 - 0.5) - x;
   var toY = engine.viewport.y + (engine.screen.tilesY / 2 - 0.5) - y;
 
-  if(engine.map.currentMap[toY] && engine.map.currentMap[toY][toX] && engine.map.currentMap[toY][toX].item){
+  if(engine.map.currentMap.objects[toY] && engine.map.currentMap.objects[toY][toX] && engine.map.currentMap.objects[toY][toX].block){
     engine.keyboard.canInput = true;
   }else{
     engine.tile.offsetX = x*5;

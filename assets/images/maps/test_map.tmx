@@ -11,140 +11,154 @@
    eJztzjEKwDAMBEEFg/7/5PQmViRy5wtYxdazw8xGd1xXMYWJ+kC41Qe0mbVZbmQzzchWuDvME10XuC5wXeB64DLtv7oMezZXLtJ+MiP3q73yMm6lN4flVmykmXXRZtfN3Ul7CEs=
   </data>
  </layer>
+ <layer name="Tile Layer 2" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztVUkOACEMMib+/8vzAasU0INTEm8Fmm62VvgjevK5PBmOmkfEGxP9KDabwy6OrYUjZsZR8kW4ygytesLwFF9Ecyz02B6iPLZWim9W87SvMs+uW5fVRncomi0FUf2dtx/1vYXMPrn/xNN3a6fNvkKh8DY+XgIAyA==
+  </data>
+ </layer>
  <objectgroup name="Object Layer 1" width="30" height="30">
   <properties>
    <property name="block" value="true"/>
   </properties>
-  <object gid="2" x="192" y="160"/>
-  <object gid="2" x="224" y="160"/>
-  <object gid="2" x="256" y="160"/>
-  <object gid="2" x="288" y="160"/>
-  <object gid="2" x="320" y="160"/>
-  <object gid="2" x="352" y="160"/>
-  <object gid="2" x="384" y="160"/>
-  <object gid="2" x="416" y="160"/>
-  <object gid="2" x="448" y="160"/>
-  <object gid="2" x="480" y="160"/>
-  <object gid="2" x="544" y="160"/>
-  <object gid="2" x="512" y="160"/>
-  <object gid="2" x="576" y="192"/>
-  <object gid="2" x="608" y="192"/>
-  <object gid="2" x="640" y="192"/>
-  <object gid="2" x="672" y="192"/>
-  <object gid="2" x="704" y="224"/>
-  <object gid="2" x="736" y="224"/>
-  <object gid="2" x="800" y="512"/>
-  <object gid="2" x="640" y="704"/>
-  <object gid="2" x="608" y="704"/>
-  <object gid="2" x="576" y="704"/>
-  <object gid="2" x="544" y="704"/>
-  <object gid="2" x="512" y="704"/>
-  <object gid="2" x="480" y="704"/>
-  <object gid="2" x="448" y="704"/>
-  <object gid="2" x="416" y="704"/>
-  <object gid="2" x="384" y="704"/>
-  <object gid="2" x="352" y="704"/>
-  <object gid="2" x="320" y="704"/>
-  <object gid="2" x="288" y="704"/>
-  <object gid="2" x="224" y="704"/>
-  <object gid="2" x="256" y="704"/>
-  <object gid="2" x="192" y="704"/>
-  <object gid="2" x="160" y="672"/>
-  <object gid="2" x="128" y="640"/>
-  <object gid="2" x="96" y="608"/>
-  <object gid="2" x="96" y="576"/>
-  <object gid="2" x="64" y="544"/>
-  <object gid="2" x="64" y="480"/>
-  <object gid="2" x="64" y="512"/>
-  <object gid="2" x="64" y="448"/>
-  <object gid="2" x="64" y="416"/>
-  <object gid="2" x="64" y="384"/>
-  <object gid="2" x="96" y="352"/>
-  <object gid="2" x="96" y="320"/>
-  <object gid="2" x="128" y="288"/>
-  <object gid="2" x="128" y="256"/>
-  <object gid="2" x="160" y="224"/>
-  <object gid="2" x="160" y="192"/>
-  <object gid="2" x="256" y="576"/>
-  <object gid="2" x="288" y="576"/>
-  <object gid="2" x="320" y="576"/>
-  <object gid="2" x="352" y="544"/>
-  <object gid="2" x="320" y="544"/>
-  <object gid="2" x="544" y="480"/>
-  <object gid="2" x="576" y="480"/>
-  <object gid="2" x="576" y="448"/>
-  <object gid="2" x="576" y="416"/>
-  <object gid="2" x="576" y="384"/>
-  <object gid="2" x="544" y="384"/>
-  <object gid="2" x="384" y="320"/>
-  <object gid="2" x="352" y="320"/>
-  <object gid="2" x="352" y="352"/>
-  <object gid="2" x="352" y="416"/>
-  <object gid="2" x="384" y="416"/>
-  <object gid="2" x="544" y="288"/>
-  <object gid="2" x="576" y="288"/>
-  <object gid="2" x="480" y="224"/>
-  <object gid="2" x="512" y="224"/>
-  <object gid="2" x="448" y="224"/>
-  <object gid="2" x="416" y="224"/>
-  <object gid="2" x="384" y="224"/>
-  <object gid="2" x="384" y="256"/>
-  <object gid="2" x="416" y="672"/>
-  <object gid="2" x="448" y="640"/>
-  <object gid="2" x="480" y="640"/>
-  <object gid="2" x="544" y="640"/>
-  <object gid="2" x="512" y="640"/>
-  <object gid="2" x="576" y="640"/>
-  <object gid="2" x="608" y="640"/>
-  <object gid="2" x="640" y="640"/>
-  <object gid="2" x="416" y="640"/>
-  <object gid="2" x="832" y="480"/>
-  <object gid="2" x="864" y="448"/>
-  <object gid="2" x="864" y="416"/>
-  <object gid="2" x="864" y="384"/>
-  <object gid="2" x="864" y="320"/>
-  <object gid="2" x="864" y="352"/>
-  <object gid="2" x="832" y="288"/>
-  <object gid="2" x="800" y="256"/>
-  <object gid="2" x="768" y="224"/>
- </objectgroup>
- <objectgroup name="Object Layer 2" width="30" height="30">
-  <properties>
-   <property name="block" value="true"/>
-  </properties>
-  <object gid="5" x="352" y="224"/>
-  <object gid="5" x="352" y="384"/>
-  <object gid="5" x="384" y="544"/>
-  <object gid="5" x="448" y="672"/>
- </objectgroup>
- <objectgroup name="Object Layer 3" width="30" height="30" visible="0">
-  <properties>
-   <property name="block" value="true"/>
-  </properties>
-  <object x="896" y="384" width="32" height="32"/>
-  <object x="928" y="416" width="32" height="32"/>
-  <object x="928" y="448" width="32" height="32"/>
-  <object x="928" y="480" width="32" height="32"/>
-  <object x="928" y="512" width="32" height="32"/>
-  <object x="928" y="544" width="32" height="32"/>
-  <object x="928" y="576" width="32" height="32"/>
-  <object x="928" y="608" width="32" height="32"/>
-  <object x="928" y="640" width="32" height="32"/>
-  <object x="928" y="672" width="32" height="32"/>
-  <object x="928" y="704" width="32" height="32"/>
-  <object x="896" y="736" width="32" height="32"/>
-  <object x="864" y="768" width="32" height="32"/>
-  <object x="512" y="704" width="32" height="32"/>
-  <object x="544" y="736" width="32" height="32"/>
-  <object x="544" y="768" width="32" height="32"/>
-  <object x="576" y="800" width="32" height="32"/>
-  <object x="608" y="800" width="32" height="32"/>
-  <object x="640" y="800" width="32" height="32"/>
-  <object x="672" y="800" width="32" height="32"/>
-  <object x="704" y="800" width="32" height="32"/>
-  <object x="736" y="800" width="32" height="32"/>
-  <object x="768" y="800" width="32" height="32"/>
-  <object x="800" y="800" width="32" height="32"/>
-  <object x="832" y="800" width="32" height="32"/>
+  <object gid="7" x="192" y="160"/>
+  <object gid="7" x="224" y="160"/>
+  <object gid="7" x="256" y="160"/>
+  <object gid="7" x="288" y="160"/>
+  <object gid="7" x="320" y="160"/>
+  <object gid="7" x="352" y="160"/>
+  <object gid="7" x="384" y="160"/>
+  <object gid="7" x="416" y="160"/>
+  <object gid="7" x="448" y="160"/>
+  <object gid="7" x="480" y="160"/>
+  <object gid="7" x="512" y="160"/>
+  <object gid="7" x="544" y="160"/>
+  <object gid="7" x="576" y="192"/>
+  <object gid="7" x="608" y="192"/>
+  <object gid="7" x="640" y="192"/>
+  <object gid="7" x="672" y="192"/>
+  <object gid="7" x="704" y="224"/>
+  <object gid="7" x="736" y="224"/>
+  <object gid="7" x="768" y="224"/>
+  <object gid="7" x="800" y="256"/>
+  <object gid="7" x="832" y="288"/>
+  <object gid="7" x="864" y="320"/>
+  <object gid="7" x="864" y="352"/>
+  <object gid="7" x="864" y="384"/>
+  <object gid="7" x="864" y="416"/>
+  <object gid="7" x="864" y="448"/>
+  <object gid="7" x="832" y="480"/>
+  <object gid="7" x="800" y="512"/>
+  <object gid="7" x="640" y="640"/>
+  <object gid="7" x="608" y="640"/>
+  <object gid="7" x="576" y="640"/>
+  <object gid="7" x="544" y="640"/>
+  <object gid="7" x="512" y="640"/>
+  <object gid="7" x="480" y="640"/>
+  <object gid="7" x="448" y="640"/>
+  <object gid="7" x="416" y="640"/>
+  <object gid="7" x="416" y="672">
+   <properties>
+    <property name="text" value="This rock knows things."/>
+    <property name="toCall" value="tell"/>
+   </properties>
+  </object>
+  <object gid="7" x="416" y="704"/>
+  <object gid="7" x="448" y="704"/>
+  <object gid="7" x="480" y="704"/>
+  <object gid="7" x="512" y="704"/>
+  <object gid="7" x="544" y="704"/>
+  <object gid="7" x="576" y="704"/>
+  <object gid="7" x="608" y="704"/>
+  <object gid="7" x="640" y="704"/>
+  <object gid="7" x="384" y="704"/>
+  <object gid="7" x="352" y="704"/>
+  <object gid="7" x="320" y="704"/>
+  <object gid="7" x="288" y="704"/>
+  <object gid="7" x="256" y="704"/>
+  <object gid="7" x="224" y="704"/>
+  <object gid="7" x="192" y="704"/>
+  <object gid="7" x="160" y="672"/>
+  <object gid="7" x="128" y="640"/>
+  <object gid="7" x="96" y="608"/>
+  <object gid="7" x="96" y="576"/>
+  <object gid="7" x="64" y="544"/>
+  <object gid="7" x="64" y="512"/>
+  <object gid="7" x="64" y="480"/>
+  <object gid="7" x="64" y="448"/>
+  <object gid="7" x="64" y="416"/>
+  <object gid="7" x="64" y="384"/>
+  <object gid="7" x="96" y="352"/>
+  <object gid="7" x="96" y="320"/>
+  <object gid="7" x="128" y="288"/>
+  <object gid="7" x="128" y="256"/>
+  <object gid="7" x="160" y="224"/>
+  <object gid="7" x="160" y="192"/>
+  <object gid="7" x="512" y="736"/>
+  <object gid="7" x="544" y="768"/>
+  <object gid="7" x="544" y="800"/>
+  <object gid="7" x="576" y="832"/>
+  <object gid="7" x="608" y="832"/>
+  <object gid="7" x="640" y="832"/>
+  <object gid="7" x="672" y="832"/>
+  <object gid="7" x="704" y="832"/>
+  <object gid="7" x="736" y="832"/>
+  <object gid="7" x="768" y="832"/>
+  <object gid="7" x="800" y="832"/>
+  <object gid="7" x="832" y="832"/>
+  <object gid="7" x="864" y="800"/>
+  <object gid="7" x="896" y="768"/>
+  <object gid="7" x="928" y="736"/>
+  <object gid="7" x="928" y="704"/>
+  <object gid="7" x="928" y="672"/>
+  <object gid="7" x="928" y="640"/>
+  <object gid="7" x="928" y="608"/>
+  <object gid="7" x="928" y="576"/>
+  <object gid="7" x="928" y="544"/>
+  <object gid="7" x="928" y="512"/>
+  <object gid="7" x="928" y="480"/>
+  <object gid="7" x="928" y="448"/>
+  <object gid="7" x="896" y="416"/>
+  <object gid="7" x="352" y="544"/>
+  <object gid="7" x="320" y="544"/>
+  <object gid="7" x="320" y="576"/>
+  <object gid="7" x="288" y="576"/>
+  <object gid="7" x="256" y="576"/>
+  <object gid="7" x="384" y="416"/>
+  <object gid="7" x="352" y="416"/>
+  <object gid="7" x="352" y="352"/>
+  <object gid="7" x="352" y="320"/>
+  <object gid="7" x="384" y="320"/>
+  <object gid="7" x="384" y="256"/>
+  <object gid="7" x="384" y="224"/>
+  <object gid="7" x="416" y="224"/>
+  <object gid="7" x="448" y="224"/>
+  <object gid="7" x="480" y="224"/>
+  <object gid="7" x="512" y="224"/>
+  <object gid="7" x="544" y="288"/>
+  <object gid="7" x="576" y="288"/>
+  <object gid="7" x="576" y="384"/>
+  <object gid="7" x="544" y="384"/>
+  <object gid="7" x="576" y="416"/>
+  <object gid="7" x="576" y="448"/>
+  <object gid="7" x="576" y="480"/>
+  <object gid="7" x="544" y="480"/>
+  <object gid="7" x="352" y="384">
+   <properties>
+    <property name="text" value="Hello World!"/>
+    <property name="toCall" value="tell"/>
+   </properties>
+  </object>
+  <object gid="7" x="384" y="544">
+   <properties>
+    <property name="text" value="Keep exploring!"/>
+    <property name="toCall" value="tell"/>
+   </properties>
+  </object>
+  <object gid="7" x="352" y="224">
+   <properties>
+    <property name="text" value="THIS. SIGN. IS. AWESOME!!!"/>
+    <property name="toCall" value="tell"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

@@ -57,8 +57,8 @@ engine.map.drawTile = function(x,y,tile){
 	      mapX = i + engine.viewport.x;
 	      mapY = j + engine.viewport.y;
 
-	      tile = engine.map.getTile(mapX,mapY) || {ground:' '}
-
+	      tile = engine.map.getTile(mapX,mapY) || [' ']
+              console.log(tile)
 	      engine.tile.draw(i, j, tile);
 	    }
 	  }
@@ -71,8 +71,8 @@ engine.map.drawTile = function(x,y,tile){
 	}
 
 	engine.map.getTile = function(x,y){
-	  if(engine.map.currentMap[y] && engine.map.currentMap[y][x]){
-	    return engine.map.currentMap[y][x]
+	  if(engine.map.currentMap.tiles[y] && engine.map.currentMap.tiles[y][x]){
+	    return engine.map.currentMap.tiles[y][x]
 	  }else{
 	    return undefined;
 	  }
@@ -89,11 +89,13 @@ engine.map.drawTile = function(x,y,tile){
 	var rx = x * 16 + engine.tile.offsetX;
 	var ry = y * 16 + engine.tile.offsetY;
 	
+        tile.forEach(function(tile){
+          if(tile==' '){
+            return;
+          }
+	  engine.handle.drawImage(engine.assets.get(tile), 0, 0, 32, 32, rx, ry, 16, 16);
+        })
 
-	  engine.handle.drawImage(engine.assets.get(tile.ground), 0, 0, 32, 32, rx, ry, 16, 16);
-          if(tile.item){
-	    engine.handle.drawImage(engine.assets.get(tile.item), 0, 0, 32, 32, rx, ry, 16, 16);
-	  }
 	};
 /*
 	engine.tile.store = function(id, imgSrc){

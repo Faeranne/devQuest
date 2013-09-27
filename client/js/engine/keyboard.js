@@ -10,34 +10,23 @@ engine.keyboard.getValue = function(key){
     case 40: return 'down';
     case 37: return 'left';
     case 39: return 'right';
+    case 65: return 'a';
   }
 }
 
 engine.keyboard.parseInput = function(event){
   if(engine.keyboard.canInput){
-   /* switch(engine.keyboard.getValue(event.keyCode)){
+   switch(engine.keyboard.getValue(event.keyCode)){
       case 'up':
-        engine.viewport.y--;
-        engine.player.spriteIndex=6;
-        break;
-    
       case 'down':
-        engine.viewport.y++;
-        engine.player.spriteIndex=0;
-        break;
-
       case 'left':
-        engine.viewport.x--;
-        engine.player.spriteIndex=9;
-        break;
-
       case 'right':
-        engine.viewport.x++;
-        engine.player.spriteIndex=3;
+        engine.player.move(engine.keyboard.getValue(event.keyCode));
         break;
-
-    }*/
-    engine.player.move(engine.keyboard.getValue(event.keyCode));
+      case 'a':
+        engine.player.activate();
+        break;
+    }
   }
 
   engine.draw();

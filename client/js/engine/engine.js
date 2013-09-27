@@ -6,7 +6,8 @@ engine.start = function(mapData, x, y){
   engine.viewport.x = x;
   engine.viewport.y = y;
   
-  engine.map.set(mapData)
+  console.log(JSON.parse(mapData))
+  engine.map.set(JSON.parse(mapData))
 
   engine.draw();
 };
@@ -30,15 +31,31 @@ var assets = [
   {id:'pu1',src:'images/entities/thomas/u-1.png'},          
   {id:'pu2',src:'images/entities/thomas/u-2.png'},          
   {id:'pu3',src:'images/entities/thomas/u-4.png'},                  
-  {id:'r',src:'images/tiles/rock.png'},          
-  {id:'g',src:'images/tiles/grass.png'},          
+  {id:'rock',src:'images/tiles/rock.png'},          
+  {id:'grass',src:'images/tiles/grass.png'},          
+  {id:'sand',src:'images/tiles/sand.png'},
+  {id:'water',src:'images/tiles/water.png'},
+  {id:'sign',src:'images/tiles/sign.png'},
   {id:' ',src:'images/tiles/blank.png'}
 ]
 
 window.onload = function(){
+    var xmlhttp;
+
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+         setTimeout(function(){engine.start(xmlhttp.responseText,6,6)},2000);
+        }
+    }
+
+    xmlhttp.open("GET", "js/mapdata.json", true);
+    xmlhttp.send();
   engine.assets.preload(assets,function(){
-    setTimeout(function(){engine.start(mapone,0,0)},2000);
-  });
+      });
 }
 
 
