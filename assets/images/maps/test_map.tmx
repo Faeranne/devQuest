@@ -195,6 +195,7 @@
  <objectgroup name="special rock" width="30" height="30">
   <object gid="0" x="544" y="288">
    <properties>
+    <property name="block" value="true"/>
     <property name="toCall" value="nextlevel"/>
    </properties>
   </object>

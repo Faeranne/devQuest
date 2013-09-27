@@ -1761,6 +1761,7 @@
                  "name":"",
                  "properties":
                     {
+                     "block":"true",
                      "toCall":"nextlevel"
                     },
                  "type":"",
