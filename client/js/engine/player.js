@@ -26,6 +26,7 @@ engine.player.draw = function(){
 };
 
 engine.player.move = function(direction){
+  if(!direction){return};
   var index, x, y
 
   index = x = y = 0;
