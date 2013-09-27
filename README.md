@@ -1,7 +1,7 @@
 devQuest
 ========
 
-The quest for opensource freedom starts here!  You can play the pre-alpha for free at devquest.projectmakeit.com
+The quest for opensource freedom starts here!  You can play the pre-alpha for free at [devquest.projectmakeit.com](http://devquest.projectmakeit.com/)
 
 devQuest is a work-in-progress rpg game that will leverage the power of the GitHub api to build a adventure for open source dev around the world.
 
