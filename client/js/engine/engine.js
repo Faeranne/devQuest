@@ -36,7 +36,7 @@ var assets = [
   {id:'sand',src:'images/tiles/sand.png'},
   {id:'water',src:'images/tiles/water.png'},
   {id:'sign',src:'images/tiles/sign.png'},
-  {id:' ',src:'images/tiles/blank.png'}
+  {id:'blank',src:'images/tiles/water.png'}
 ]
 
 window.onload = function(){

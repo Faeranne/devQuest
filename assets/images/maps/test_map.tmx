@@ -160,5 +160,6 @@
     <property name="toCall" value="tell"/>
    </properties>
   </object>
+  <object gid="7" x="864" y="448"/>
  </objectgroup>
 </map>

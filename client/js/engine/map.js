@@ -57,7 +57,7 @@ engine.map.drawTile = function(x,y,tile){
 	      mapX = i + engine.viewport.x;
 	      mapY = j + engine.viewport.y;
 
-	      tile = engine.map.getTile(mapX,mapY) || [' ']
+	      tile = engine.map.getTile(mapX,mapY) || ['blank']
               console.log(tile)
 	      engine.tile.draw(i, j, tile);
 	    }
