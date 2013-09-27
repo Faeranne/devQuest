@@ -20,7 +20,6 @@ engine.player.activate = function(){
   }
 
   if(engine.map.currentMap.objects[y] && engine.map.currentMap.objects[y][x] && engine.map.currentMap.objects[y][x].toCall != undefined){
-    console.log(engine.map.currentMap.objects[y][x].toCall)
     engine.scripts.call[engine.map.currentMap.objects[y][x].toCall](engine.map.currentMap.objects[y][x])
   }
 }
@@ -55,6 +54,12 @@ engine.player.move = function(direction){
     case 'right': index = 3; x=-1; break;
     case 'left': index = 9; x=1; break;
     case 'down': index = 0; y=-1; break;
+  }
+
+  if(engine.player.spriteIndex != index){
+    engine.player.spriteIndex = index
+    engine.keyboard.canInput = true;
+    return;
   }
 
   var toX = engine.viewport.x + (engine.screen.tilesX / 2 - 0.5) - x;

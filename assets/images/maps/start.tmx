@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" source="tile_set.tsx"/>
+ <layer name="Tile Layer 1" width="50" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1MEKwCAMA1CHsP//5J0GO8zWNlWr5JCbGJ9YaymlTsjVyIxuOujInhMcLQMduRyrz0XHvo7TZ2OVw9udyYF09zikNZHuSMf9icWAWiz7/J1VSyaHdOc7OFpdOzh65hN1eN+1978Z4UDmM9JSBztQS6/nXYvOh9SHOqx7awbvu41wWKIZPI7ZBsmB/CNZHda5YxjGngeXXBBX
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="50" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1jkKADAIBEAJ5P9fTpUybY7NDNivKGjVHm1R3KOfDgAAH3J/cyXPNuWXT+kDpoSdfj0/AAyaBgAq
+  </data>
+ </layer>
+ <objectgroup name="water" width="50" height="30">
+  <properties>
+   <property name="block" value="true"/>
+   <property name="text" value="You can't swim yet."/>
+   <property name="toCall" value="tell"/>
+  </properties>
+  <object gid="7" x="800" y="160"/>
+  <object gid="7" x="800" y="128"/>
+  <object gid="7" x="800" y="96"/>
+  <object gid="7" x="800" y="64"/>
+  <object gid="7" x="800" y="32"/>
+  <object gid="7" x="768" y="192"/>
+  <object gid="7" x="768" y="256"/>
+  <object gid="7" x="768" y="224"/>
+  <object gid="7" x="768" y="288"/>
+  <object gid="7" x="768" y="320"/>
+  <object gid="7" x="736" y="352"/>
+  <object gid="7" x="736" y="384"/>
+  <object gid="7" x="736" y="416"/>
+  <object gid="7" x="736" y="448"/>
+  <object gid="7" x="736" y="480"/>
+  <object gid="7" x="704" y="480"/>
+  <object gid="7" x="672" y="480"/>
+  <object gid="7" x="640" y="480"/>
+  <object gid="7" x="608" y="480"/>
+  <object gid="7" x="576" y="512"/>
+  <object gid="7" x="544" y="512"/>
+  <object gid="7" x="512" y="544"/>
+  <object gid="7" x="480" y="544"/>
+  <object gid="7" x="448" y="576"/>
+  <object gid="7" x="448" y="608"/>
+  <object gid="7" x="416" y="608"/>
+  <object gid="7" x="384" y="576"/>
+  <object gid="7" x="384" y="544"/>
+  <object gid="7" x="384" y="480"/>
+  <object gid="7" x="384" y="512"/>
+  <object gid="7" x="384" y="448"/>
+  <object gid="7" x="384" y="416"/>
+  <object gid="7" x="352" y="384"/>
+  <object gid="7" x="320" y="384"/>
+  <object gid="7" x="288" y="416"/>
+  <object gid="7" x="256" y="448"/>
+  <object gid="7" x="256" y="480"/>
+  <object gid="7" x="224" y="512"/>
+  <object gid="7" x="224" y="544"/>
+  <object gid="7" x="224" y="576"/>
+  <object gid="7" x="224" y="608"/>
+  <object gid="7" x="224" y="640"/>
+  <object gid="7" x="256" y="672"/>
+  <object gid="7" x="320" y="704"/>
+  <object gid="7" x="288" y="704"/>
+  <object gid="7" x="352" y="736"/>
+  <object gid="7" x="384" y="768"/>
+  <object gid="7" x="416" y="768"/>
+  <object gid="7" x="448" y="768"/>
+  <object gid="7" x="480" y="768"/>
+  <object gid="7" x="512" y="768"/>
+  <object gid="7" x="544" y="768"/>
+  <object gid="7" x="576" y="736"/>
+  <object gid="7" x="608" y="736"/>
+  <object gid="7" x="640" y="704"/>
+  <object gid="7" x="640" y="672"/>
+  <object gid="7" x="672" y="704"/>
+  <object gid="7" x="704" y="736"/>
+  <object gid="7" x="704" y="768"/>
+  <object gid="7" x="704" y="800"/>
+  <object gid="7" x="704" y="832"/>
+  <object gid="7" x="736" y="864"/>
+  <object gid="7" x="800" y="864"/>
+  <object gid="7" x="768" y="864"/>
+  <object gid="7" x="832" y="864"/>
+  <object gid="7" x="864" y="864"/>
+  <object gid="7" x="896" y="864"/>
+  <object gid="7" x="928" y="832"/>
+  <object gid="7" x="928" y="800"/>
+  <object gid="7" x="960" y="768"/>
+  <object gid="7" x="992" y="736"/>
+  <object gid="7" x="992" y="768"/>
+  <object gid="7" x="992" y="800"/>
+  <object gid="7" x="1024" y="832"/>
+  <object gid="7" x="1056" y="864"/>
+  <object gid="7" x="1088" y="864"/>
+  <object gid="7" x="1120" y="864"/>
+  <object gid="7" x="1152" y="864"/>
+  <object gid="7" x="1184" y="864"/>
+  <object gid="7" x="1216" y="864"/>
+  <object gid="7" x="1248" y="864"/>
+  <object gid="7" x="1280" y="864"/>
+  <object gid="7" x="1312" y="864"/>
+  <object gid="7" x="1344" y="832"/>
+  <object gid="7" x="1376" y="832"/>
+  <object gid="7" x="1408" y="800"/>
+  <object gid="7" x="1408" y="768"/>
+  <object gid="7" x="1440" y="736"/>
+  <object gid="7" x="1440" y="704"/>
+  <object gid="7" x="1440" y="672"/>
+  <object gid="7" x="1408" y="640"/>
+  <object gid="7" x="1408" y="608"/>
+  <object gid="7" x="1408" y="576"/>
+  <object gid="7" x="1408" y="544"/>
+  <object gid="7" x="1408" y="512"/>
+  <object gid="7" x="1408" y="480"/>
+  <object gid="7" x="1376" y="448"/>
+  <object gid="7" x="1344" y="416"/>
+  <object gid="7" x="1312" y="416"/>
+  <object gid="7" x="1280" y="416"/>
+  <object gid="7" x="1248" y="416"/>
+  <object gid="7" x="1216" y="416"/>
+  <object gid="7" x="1184" y="416"/>
+  <object gid="7" x="1152" y="416"/>
+  <object gid="7" x="1120" y="416"/>
+  <object gid="7" x="1088" y="416"/>
+  <object gid="7" x="1056" y="416"/>
+  <object gid="7" x="1024" y="448"/>
+  <object gid="7" x="992" y="480"/>
+  <object gid="7" x="992" y="448"/>
+  <object gid="7" x="992" y="416"/>
+  <object gid="7" x="992" y="384"/>
+  <object gid="7" x="992" y="352"/>
+  <object gid="7" x="992" y="320"/>
+  <object gid="7" x="992" y="288"/>
+  <object gid="7" x="992" y="256"/>
+  <object gid="7" x="1024" y="224"/>
+  <object gid="7" x="1024" y="192"/>
+  <object gid="7" x="1024" y="160"/>
+  <object gid="7" x="1024" y="128"/>
+  <object gid="7" x="1024" y="96"/>
+  <object gid="7" x="1024" y="64"/>
+  <object gid="7" x="1024" y="32"/>
+  <object gid="7" x="1152" y="640"/>
+  <object gid="7" x="1184" y="608"/>
+  <object gid="7" x="1216" y="608"/>
+  <object gid="7" x="1248" y="608"/>
+  <object gid="7" x="1248" y="640"/>
+  <object gid="7" x="1248" y="672"/>
+  <object gid="7" x="1216" y="704"/>
+  <object gid="7" x="1184" y="672"/>
+  <object gid="7" x="1152" y="672"/>
+ </objectgroup>
+ <objectgroup name="rocks" width="50" height="30">
+  <properties>
+   <property name="block" value="true"/>
+  </properties>
+  <object gid="7" x="832" y="32"/>
+  <object gid="7" x="864" y="32"/>
+  <object gid="7" x="896" y="32"/>
+  <object gid="7" x="928" y="32"/>
+  <object gid="7" x="960" y="32"/>
+  <object gid="7" x="992" y="32"/>
+  <object gid="7" x="1120" y="512"/>
+  <object gid="7" x="1152" y="512"/>
+  <object gid="7" x="1152" y="544"/>
+  <object gid="7" x="1120" y="544"/>
+  <object gid="7" x="544" y="672"/>
+  <object gid="7" x="512" y="672"/>
+  <object gid="7" x="480" y="704"/>
+ </objectgroup>
+ <objectgroup name="sign" width="50" height="30">
+  <properties>
+   <property name="block" value="true"/>
+   <property name="toCall" value="tell"/>
+  </properties>
+  <object name="leaving" gid="7" x="992" y="96">
+   <properties>
+    <property name="text" value="GitNet is currently under renovation."/>
+   </properties>
+  </object>
+  <object name="beach" gid="7" x="960" y="480">
+   <properties>
+    <property name="text" value="Welcome to devIsland, your first stop to the OpenSource World.  Feel free to explore!"/>
+   </properties>
+  </object>
+  <object name="tip" gid="7" x="352" y="416">
+   <properties>
+    <property name="text" value="[Redacted by NS]"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Object Layer 4" width="50" height="30"/>
+</map>

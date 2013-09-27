@@ -1,8 +1,4 @@
 var engine = (typeof engine === 'undefined') ? {} : engine;
-
-engine.map = {}
-
-engine.map.nullTile = {gid:0,params:{}}
 /*
 engine.addEventListener('draw',function(e){
   var map = engine.map.current
@@ -58,7 +54,6 @@ engine.map.drawTile = function(x,y,tile){
 	      mapY = j + engine.viewport.y;
 
 	      tile = engine.map.getTile(mapX,mapY) || ['blank']
-              console.log(tile)
 	      engine.tile.draw(i, j, tile);
 	    }
 	  }
@@ -66,9 +61,13 @@ engine.map.drawTile = function(x,y,tile){
 
 	engine.map.currentMap = null;
 
-	engine.map.set = function(map){
-	  engine.map.currentMap = map;
+	engine.map.setMap = function(id){
+	  engine.map.currentMap = engine.map.avalible[id];
 	}
+        engine.map.setXY = function(x,y){
+          engine.viewport.x=x;
+          engine.viewport.y=y;
+        }
 
 	engine.map.getTile = function(x,y){
 	  if(engine.map.currentMap.tiles[y] && engine.map.currentMap.tiles[y][x]){
@@ -114,3 +113,25 @@ engine.map.drawTile = function(x,y,tile){
 	engine.tile.retrieve = function(id){
 	  return engine.tile.images[id][0];
 	};*/
+
+engine.map.avalible={}
+
+engine.map.addMap = function(id,src,launch){
+  var xmlhttp;
+
+  if (window.XMLHttpRequest) {
+      // code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp = new XMLHttpRequest();
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      engine.map.avalible[id]=JSON.parse(xmlhttp.responseText)
+      if(launch){
+        engine.map.setMap(id)
+        engine.draw()
+      }
+    }
+  }
+  xmlhttp.open("GET", src, true);
+  xmlhttp.send();
+}

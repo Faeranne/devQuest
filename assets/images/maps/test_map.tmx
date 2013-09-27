@@ -3,9 +3,7 @@
  <properties>
   <property name="blank" value="3"/>
  </properties>
- <tileset firstgid="1" name="tile_set" tilewidth="32" tileheight="32">
-  <image source="../tiles/tile_set.png" width="128" height="128"/>
- </tileset>
+ <tileset firstgid="1" source="tile_set.tsx"/>
  <layer name="Tile Layer 1" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztzjEKwDAMBEEFg/7/5PQmViRy5wtYxdazw8xGd1xXMYWJ+kC41Qe0mbVZbmQzzchWuDvME10XuC5wXeB64DLtv7oMezZXLtJ+MiP3q73yMm6lN4flVmykmXXRZtfN3Ul7CEs=
@@ -13,10 +11,10 @@
  </layer>
  <layer name="Tile Layer 2" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztVUkOACEMMib+/8vzAasU0INTEm8Fmm62VvgjevK5PBmOmkfEGxP9KDabwy6OrYUjZsZR8kW4ygytesLwFF9Ecyz02B6iPLZWim9W87SvMs+uW5fVRncomi0FUf2dtx/1vYXMPrn/xNN3a6fNvkKh8DY+XgIAyA==
+   eJztVVsKwDAMKoPe/8pj/01rNI7BIvQvasirYzT+iCv5qjwZjppHxJsL/Sg2m8Mpjq1FRcyKo+SLcJUZ2vWE4Sm+iObc6LE9RHlsrRTfrKbb13Er3EB3KJqtau/q24/6voXMPlX/ie67ddJm3wPH/DUajW/gBlXqAMk=
   </data>
  </layer>
- <objectgroup name="Object Layer 1" width="30" height="30">
+ <objectgroup name="rocks" width="30" height="30">
   <properties>
    <property name="block" value="true"/>
   </properties>
@@ -45,9 +43,6 @@
   <object gid="7" x="864" y="352"/>
   <object gid="7" x="864" y="384"/>
   <object gid="7" x="864" y="416"/>
-  <object gid="7" x="864" y="448"/>
-  <object gid="7" x="832" y="480"/>
-  <object gid="7" x="800" y="512"/>
   <object gid="7" x="640" y="640"/>
   <object gid="7" x="608" y="640"/>
   <object gid="7" x="576" y="640"/>
@@ -55,13 +50,6 @@
   <object gid="7" x="512" y="640"/>
   <object gid="7" x="480" y="640"/>
   <object gid="7" x="448" y="640"/>
-  <object gid="7" x="416" y="640"/>
-  <object gid="7" x="416" y="672">
-   <properties>
-    <property name="text" value="This rock knows things."/>
-    <property name="toCall" value="tell"/>
-   </properties>
-  </object>
   <object gid="7" x="416" y="704"/>
   <object gid="7" x="448" y="704"/>
   <object gid="7" x="480" y="704"/>
@@ -80,7 +68,6 @@
   <object gid="7" x="160" y="672"/>
   <object gid="7" x="128" y="640"/>
   <object gid="7" x="96" y="608"/>
-  <object gid="7" x="96" y="576"/>
   <object gid="7" x="64" y="544"/>
   <object gid="7" x="64" y="512"/>
   <object gid="7" x="64" y="480"/>
@@ -93,6 +80,92 @@
   <object gid="7" x="128" y="256"/>
   <object gid="7" x="160" y="224"/>
   <object gid="7" x="160" y="192"/>
+  <object gid="7" x="352" y="544"/>
+  <object gid="7" x="320" y="544"/>
+  <object gid="7" x="320" y="576"/>
+  <object gid="7" x="288" y="576"/>
+  <object gid="7" x="256" y="576"/>
+  <object gid="7" x="384" y="416"/>
+  <object gid="7" x="352" y="416"/>
+  <object gid="7" x="352" y="352"/>
+  <object gid="7" x="352" y="320"/>
+  <object gid="7" x="384" y="320"/>
+  <object gid="7" x="384" y="256"/>
+  <object gid="7" x="384" y="224"/>
+  <object gid="7" x="416" y="224"/>
+  <object gid="7" x="448" y="224"/>
+  <object gid="7" x="480" y="224"/>
+  <object gid="7" x="512" y="224"/>
+  <object gid="7" x="416" y="640"/>
+  <object gid="7" x="576" y="288"/>
+  <object gid="7" x="576" y="384"/>
+  <object gid="7" x="544" y="384"/>
+  <object gid="7" x="576" y="416"/>
+  <object gid="7" x="576" y="448"/>
+  <object gid="7" x="576" y="480"/>
+ </objectgroup>
+ <objectgroup name="Signs" width="30" height="30">
+  <properties>
+   <property name="block" value="true"/>
+   <property name="toCall" value="tell"/>
+  </properties>
+  <object name="rock" gid="7" x="416" y="672">
+   <properties>
+    <property name="text" value="The rocks know things."/>
+   </properties>
+  </object>
+  <object name="sign1" gid="7" x="384" y="544">
+   <properties>
+    <property name="text" value="Keep exploring.  There are many secrets on the island."/>
+   </properties>
+  </object>
+  <object name="sign2" gid="7" x="352" y="384">
+   <properties>
+    <property name="text" value="Welcome to devQuest pre-Island.  We are currently building on another island, so hang tight till we finish.  We'll move here soon!"/>
+   </properties>
+  </object>
+  <object name="sign3" gid="7" x="352" y="224">
+   <properties>
+    <property name="text" value="This whole island is OpenSourced.  Feel free to see how it works on GitHub!"/>
+   </properties>
+  </object>
+  <object name="sign beach" gid="7" x="704" y="704">
+   <properties>
+    <property name="text" value="There's some stuff on the beach.  Can you find it all?"/>
+   </properties>
+  </object>
+  <object name="west rock" gid="7" x="96" y="576">
+   <properties>
+    <property name="text" value="I'm a rock!"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Whisper" width="30" height="30">
+  <properties>
+   <property name="toCall" value="tell"/>
+  </properties>
+  <object name="beach 1" gid="7" x="800" y="768">
+   <properties>
+    <property name="text" value="You found something!  But it's worthless"/>
+   </properties>
+  </object>
+  <object name="beach 2" gid="7" x="832" y="736">
+   <properties>
+    <property name="text" value="You found nothing."/>
+   </properties>
+  </object>
+  <object name="beach 3" gid="7" x="864" y="704">
+   <properties>
+    <property name="text" value="It's just a piece of glass.  It's worthless.      and sharp. ow."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Water" width="30" height="30">
+  <properties>
+   <property name="block" value="true"/>
+   <property name="text" value="You can't swim yet!"/>
+   <property name="toCall" value="tell"/>
+  </properties>
   <object gid="7" x="512" y="736"/>
   <object gid="7" x="544" y="768"/>
   <object gid="7" x="544" y="800"/>
@@ -118,48 +191,12 @@
   <object gid="7" x="928" y="480"/>
   <object gid="7" x="928" y="448"/>
   <object gid="7" x="896" y="416"/>
-  <object gid="7" x="352" y="544"/>
-  <object gid="7" x="320" y="544"/>
-  <object gid="7" x="320" y="576"/>
-  <object gid="7" x="288" y="576"/>
-  <object gid="7" x="256" y="576"/>
-  <object gid="7" x="384" y="416"/>
-  <object gid="7" x="352" y="416"/>
-  <object gid="7" x="352" y="352"/>
-  <object gid="7" x="352" y="320"/>
-  <object gid="7" x="384" y="320"/>
-  <object gid="7" x="384" y="256"/>
-  <object gid="7" x="384" y="224"/>
-  <object gid="7" x="416" y="224"/>
-  <object gid="7" x="448" y="224"/>
-  <object gid="7" x="480" y="224"/>
-  <object gid="7" x="512" y="224"/>
-  <object gid="7" x="544" y="288"/>
-  <object gid="7" x="576" y="288"/>
-  <object gid="7" x="576" y="384"/>
-  <object gid="7" x="544" y="384"/>
-  <object gid="7" x="576" y="416"/>
-  <object gid="7" x="576" y="448"/>
-  <object gid="7" x="576" y="480"/>
-  <object gid="7" x="544" y="480"/>
-  <object gid="7" x="352" y="384">
+ </objectgroup>
+ <objectgroup name="special rock" width="30" height="30">
+  <object gid="0" x="544" y="288">
    <properties>
-    <property name="text" value="Hello World!"/>
-    <property name="toCall" value="tell"/>
+    <property name="toCall" value="nextlevel"/>
    </properties>
   </object>
-  <object gid="7" x="384" y="544">
-   <properties>
-    <property name="text" value="Keep exploring!"/>
-    <property name="toCall" value="tell"/>
-   </properties>
-  </object>
-  <object gid="7" x="352" y="224">
-   <properties>
-    <property name="text" value="THIS. SIGN. IS. AWESOME!!!"/>
-    <property name="toCall" value="tell"/>
-   </properties>
-  </object>
-  <object gid="7" x="864" y="448"/>
  </objectgroup>
 </map>

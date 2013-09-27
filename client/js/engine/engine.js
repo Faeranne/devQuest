@@ -1,16 +1,20 @@
 engine = (typeof engine === 'undefined') ? {} : engine;
 
-engine.start = function(mapData, x, y){
+engine.start = function(x, y){
   window.addEventListener('keydown', engine.keyboard.parseInput, false);
   engine.setViewport('canvas');
-  engine.viewport.x = x;
-  engine.viewport.y = y;
   
-  console.log(JSON.parse(mapData))
-  engine.map.set(JSON.parse(mapData))
+  engine.map.addMap('init','js/map1.json',true)
+  engine.map.addMap('map2','js/map2.json',false)
+  engine.map.setXY(x,y)
 
-  engine.draw();
 };
+
+engine.nextLevel = function(){
+  engine.map.setXY(22,15)
+  engine.map.setMap('map2')
+  engine.draw()
+}
 
 engine.draw = function(){
   engine.map.draw();
@@ -40,21 +44,8 @@ var assets = [
 ]
 
 window.onload = function(){
-    var xmlhttp;
-
-    if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-    }
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-         setTimeout(function(){engine.start(xmlhttp.responseText,6,6)},2000);
-        }
-    }
-
-    xmlhttp.open("GET", "js/mapdata.json", true);
-    xmlhttp.send();
   engine.assets.preload(assets,function(){
+  setTimeout(function(){engine.start(15,13)},2000);
       });
 }
 

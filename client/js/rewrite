@@ -1,21 +1,24 @@
-var data = require('./test_map')
+var data = require('./premap1')
 console.log(data)
 var newdata = {}
 newdata.tiles = [[]]
 tmp=[]
 tmp2=[]
 var k = 0
+var map = {}
+map.width=data.width
+map.height=data.height
 data.layers.forEach(function(item){
   if(item.type=="tilelayer"){
-    for(var j=0;j<30;j++){
+    for(var j=0;j<map.height;j++){
       if(!tmp[j]){
         tmp[j]=[]
       }
-      for(var i=0;i<30;i++){
+      for(var i=0;i<map.width;i++){
         if(!tmp[j][i]){
           tmp[j][i]=[]
         }
-        var test = item.data[i+(j*30)]
+        var test = item.data[i+(j*map.width)]
         var tile = ' '
         if(test==1){
           tile='grass'
@@ -37,11 +40,11 @@ data.layers.forEach(function(item){
     }
     k++
   }else if(item.type=="objectgroup"){
-    for(var j=0;j<30;j++){
+    for(var j=0;j<map.height;j++){
       if(tmp2[j]==null){
         tmp2[j]=[]
       }
-      for(var i=0;i<30;i++){
+      for(var i=0;i<map.width;i++){
         if(tmp2[j][i]==null){
           tmp2[j][i]={}
         }
@@ -65,4 +68,4 @@ data.layers.forEach(function(item){
 newdata.tiles=tmp
 newdata.objects=tmp2
 var fs = require('fs')
-fs.writeFileSync('mapdata.json',JSON.stringify(newdata))
+fs.writeFileSync('map1.json',JSON.stringify(newdata))
