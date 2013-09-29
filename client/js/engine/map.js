@@ -77,6 +77,15 @@ engine.map.drawTile = function(x,y,tile){
 	  }
 	}
 
+	engine.map.getObject = function(x,y){
+	  if(engine.map.currentMap.objects[y] && engine.map.currentMap.objects[y][x]){
+	    return engine.map.currentMap.objects[y][x]
+	  }else{
+	    return undefined;
+	  }
+	}
+
+
 	engine.tile = {};
 
 	engine.tile.offsetX = 0;

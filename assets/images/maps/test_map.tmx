@@ -6,12 +6,12 @@
  <tileset firstgid="1" source="tile_set.tsx"/>
  <layer name="Tile Layer 1" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztzjEKwDAMBEEFg/7/5PQmViRy5wtYxdazw8xGd1xXMYWJ+kC41Qe0mbVZbmQzzchWuDvME10XuC5wXeB64DLtv7oMezZXLtJ+MiP3q73yMm6lN4flVmykmXXRZtfN3Ul7CEs=
+   eJzt0jEOACAIQ1GMifc/sjtRhFhEI8OfX4dWIqrZdxVjESZqB8K1bkCbWtvLlWxPU7Ij3BNmpMv9dN93G+vUt251PWxuzlykPTIld9eeeRrX0srxci020tS6aDPLeB0vrAgj
   </data>
  </layer>
  <layer name="Tile Layer 2" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztVVsKwDAMKoPe/8pj/01rNI7BIvQvasirYzT+iCv5qjwZjppHxJsL/Sg2m8Mpjq1FRcyKo+SLcJUZ2vWE4Sm+iObc6LE9RHlsrRTfrKbb13Er3EB3KJqtau/q24/6voXMPlX/ie67ddJm3wPH/DUajW/gBlXqAMk=
+   eJztlVEOwCAIQ80S73/lZf+ipa1uyXiJfxQQAVsr/siVPK6YjEbNI9L1gf/INpvDyo6thcNmpFHyRbRKD83ehNEpcRGffeKPfUNUx9Yqk8sJvdovb92XBZ2hqLfcsd27H417isw8uf/E3Xtr5Zs9Dzv6ryiKb3ADNsoAxQ==
   </data>
  </layer>
  <objectgroup name="rocks" width="30" height="30">
@@ -42,7 +42,6 @@
   <object gid="7" x="864" y="320"/>
   <object gid="7" x="864" y="352"/>
   <object gid="7" x="864" y="384"/>
-  <object gid="7" x="864" y="416"/>
   <object gid="7" x="640" y="640"/>
   <object gid="7" x="608" y="640"/>
   <object gid="7" x="576" y="640"/>
@@ -139,6 +138,11 @@
     <property name="text" value="I'm a rock!"/>
    </properties>
   </object>
+  <object name="next level" gid="7" x="544" y="288">
+   <properties>
+    <property name="text" value="Want to check out the next level?  Try engine.nextLevel() in the console!  "/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Whisper" width="30" height="30">
   <properties>
@@ -187,16 +191,52 @@
   <object gid="7" x="928" y="608"/>
   <object gid="7" x="928" y="576"/>
   <object gid="7" x="928" y="544"/>
-  <object gid="7" x="928" y="512"/>
-  <object gid="7" x="928" y="480"/>
-  <object gid="7" x="928" y="448"/>
-  <object gid="7" x="896" y="416"/>
+  <object gid="7" x="896" y="384"/>
+  <object gid="7" x="928" y="384"/>
  </objectgroup>
- <objectgroup name="special rock" width="30" height="30">
-  <object gid="0" x="544" y="288">
+ <objectgroup name="special rock" width="30" height="30"/>
+ <objectgroup name="transition" width="30" height="30">
+  <properties>
+   <property name="beforeStep" value="transition"/>
+  </properties>
+  <object gid="7" x="928" y="416">
    <properties>
-    <property name="block" value="true"/>
-    <property name="toCall" value="nextlevel"/>
+    <property name="direction" value="right"/>
+    <property name="map" value="map2"/>
+    <property name="x" value="-4"/>
+    <property name="y" value="12"/>
+   </properties>
+  </object>
+  <object gid="7" x="928" y="448">
+   <properties>
+    <property name="direction" value="right"/>
+    <property name="map" value="map2"/>
+    <property name="x" value="-4"/>
+    <property name="y" value="13"/>
+   </properties>
+  </object>
+  <object gid="7" x="928" y="480">
+   <properties>
+    <property name="direction" value="right"/>
+    <property name="map" value="map2"/>
+    <property name="x" value="-4"/>
+    <property name="y" value="14"/>
+   </properties>
+  </object>
+  <object gid="7" x="928" y="512">
+   <properties>
+    <property name="direction" value="right"/>
+    <property name="map" value="map2"/>
+    <property name="x" value="-4"/>
+    <property name="y" value="15"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="stepable" width="30" height="30">
+  <object gid="7" x="448" y="672">
+   <properties>
+    <property name="afterStep" value="tell"/>
+    <property name="text" value="Ouch!  You kicked the rock... and it laughed?"/>
    </properties>
   </object>
  </objectgroup>

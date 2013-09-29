@@ -4,7 +4,7 @@ engine.start = function(x, y){
   window.addEventListener('keydown', engine.keyboard.parseInput, false);
   engine.setViewport('canvas');
   
-  engine.map.addMap('init','js/map1.json',true)
+  engine.map.addMap('map1','js/map1.json',true)
   engine.map.addMap('map2','js/map2.json',false)
   engine.map.setXY(x,y)
 

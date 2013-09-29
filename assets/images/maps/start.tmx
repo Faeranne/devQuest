@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="tile_set.tsx"/>
  <layer name="Tile Layer 1" width="50" height="30">
   <data encoding="base64" compression="zlib">
-   eJzt1MEKwCAMA1CHsP//5J0GO8zWNlWr5JCbGJ9YaymlTsjVyIxuOujInhMcLQMduRyrz0XHvo7TZ2OVw9udyYF09zikNZHuSMf9icWAWiz7/J1VSyaHdOc7OFpdOzh65hN1eN+1978Z4UDmM9JSBztQS6/nXYvOh9SHOqx7awbvu41wWKIZPI7ZBsmB/CNZHda5YxjGngeXXBBX
+   eJzt1LEOwCAIBFAbk/7/J3dq0kFBPKpgbriNgK8p1FJKXZCrkxWz6aAjek5w9Ax0xHLsfhcdeR2n78Yux+zsSA5k9ohDqvF0ezruTywG1GLp03qrFi+HRx/pm2dw9GoyOEb2E3XM/NczDi2IA9lP5Ha25vzpQC2jnrcW3Q9pHuqw9tYM6H6uimbwuvu7HMidieqw7h3DMPY8Kb4QFw==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="50" height="30">
@@ -55,10 +55,6 @@
   <object gid="7" x="256" y="448"/>
   <object gid="7" x="256" y="480"/>
   <object gid="7" x="224" y="512"/>
-  <object gid="7" x="224" y="544"/>
-  <object gid="7" x="224" y="576"/>
-  <object gid="7" x="224" y="608"/>
-  <object gid="7" x="224" y="640"/>
   <object gid="7" x="256" y="672"/>
   <object gid="7" x="320" y="704"/>
   <object gid="7" x="288" y="704"/>
@@ -149,6 +145,21 @@
   <object gid="7" x="1216" y="704"/>
   <object gid="7" x="1184" y="672"/>
   <object gid="7" x="1152" y="672"/>
+  <object gid="7" x="0" y="512"/>
+  <object gid="7" x="32" y="512"/>
+  <object gid="7" x="64" y="512"/>
+  <object gid="7" x="96" y="512"/>
+  <object gid="7" x="128" y="512"/>
+  <object gid="7" x="160" y="512"/>
+  <object gid="7" x="192" y="512"/>
+  <object gid="7" x="224" y="672"/>
+  <object gid="7" x="192" y="672"/>
+  <object gid="7" x="160" y="672"/>
+  <object gid="7" x="128" y="672"/>
+  <object gid="7" x="96" y="672"/>
+  <object gid="7" x="64" y="672"/>
+  <object gid="7" x="32" y="672"/>
+  <object gid="7" x="0" y="672"/>
  </objectgroup>
  <objectgroup name="rocks" width="50" height="30">
   <properties>
@@ -189,5 +200,41 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Object Layer 4" width="50" height="30"/>
+ <objectgroup name="transition" width="50" height="30">
+  <properties>
+   <property name="beforeStep" value="transition"/>
+  </properties>
+  <object gid="7" x="0" y="544">
+   <properties>
+    <property name="direction" value="left"/>
+    <property name="map" value="map1"/>
+    <property name="x" value="25"/>
+    <property name="y" value="8"/>
+   </properties>
+  </object>
+  <object gid="7" x="0" y="576">
+   <properties>
+    <property name="direction" value="left"/>
+    <property name="map" value="map1"/>
+    <property name="x" value="25"/>
+    <property name="y" value="9"/>
+   </properties>
+  </object>
+  <object gid="7" x="0" y="608">
+   <properties>
+    <property name="direction" value="left"/>
+    <property name="map" value="map1"/>
+    <property name="x" value="25"/>
+    <property name="y" value="10"/>
+   </properties>
+  </object>
+  <object gid="7" x="0" y="640">
+   <properties>
+    <property name="direction" value="left"/>
+    <property name="map" value="map1"/>
+    <property name="x" value="25"/>
+    <property name="y" value="11"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

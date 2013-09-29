@@ -43,6 +43,14 @@ engine.player.draw = function(){
 
 engine.player.move = function(direction){
   if(!direction){return};
+  if(engine.map.getObject(engine.viewport.x+4,engine.viewport.y+4) && engine.map.getObject(engine.viewport.x+4,engine.viewport.y+4).beforeStep){
+    console.log(direction)
+    console.log(engine.map.getObject(engine.viewport.x+4,engine.viewport.y+4))
+    var cancel = engine.scripts.call[engine.map.getObject(engine.viewport.x+4,engine.viewport.y+4).beforeStep](direction,engine.map.getObject(engine.viewport.x+4,engine.viewport.y+4))
+    if(cancel){
+      return;
+    }
+  }
   var index, x, y
 
   index = x = y = 0;
