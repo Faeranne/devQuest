@@ -13,6 +13,16 @@ engine.setViewport = function(id){
   engine.screen.tilesY = engine.canvas.height/ 16;
 }
 
+engine.setFullscreen = function(id){
+  var elem = document.getElementById(id);
+  if(elem.requestFullscreen){
+    elem.requestFullscreen();
+  }else if(elem.mozRequestFullscreen){
+    elem.mozRequestFullscreen();
+  }else if(elem.webkitRequestFullscreen){
+    elem.webkitRequestFullscreen();
+  }
+}
 engine.viewport = {}
 engine.viewport.x = 0;
 engine.viewport.y = 0;

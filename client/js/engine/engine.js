@@ -1,14 +1,37 @@
 engine = (typeof engine === 'undefined') ? {} : engine;
 
-engine.start = function(x, y){
-  window.addEventListener('keydown', engine.keyboard.parseInput, false);
+engine.init = {}
+
+engine.init.x = 15
+engine.init.y = 13
+
+engine.init.maps = {}
+engine.init.maps.map1 = {src:'js/map1.json',first:true}
+engine.init.maps.map2 = {src:'js/map2.json',first:false}
+
+
+engine.start = function(){
   engine.setViewport('canvas');
+  window.addEventListener('keydown', engine.keyboard.parseInput, false);
   
-  engine.map.addMap('map1','js/map1.json',true)
-  engine.map.addMap('map2','js/map2.json',false)
-  engine.map.setXY(x,y)
+  for(key in engine.init.maps){
+    var value = engine.init.maps[key]
+    engine.map.addMap(key,value.src,value.first)
+  }
+  engine.map.setXY(engine.init.x,engine.init.y)
 
 };
+
+engine.fullscreen = function(){
+  engine.setFullscreen('canvas');
+  window.addEventListener('touchstart', engine.mobile.startTouch, false);
+  window.addEventListener('touchmove', engine.mobile.moveTouch, false);
+  window.addEventListener('touchcancel', engine.mobile.stopTouch, false);
+  window.addEventListener('touchend', engine.mobile.stopTouch, false);
+  window.addEventListener('touchleave', engine.mobile.stopTouch, false);
+  window.setInterval(engine.mobile.draw,50);
+  engine.canvas.className = 'fullscreen'
+}
 
 engine.nextLevel = function(){
   engine.map.setXY(22,15)
@@ -44,10 +67,7 @@ var assets = [
 ]
 
 window.onload = function(){
-  engine.assets.preload(assets,function(){
-  setTimeout(function(){engine.start(15,13)},2000);
-      });
+  engine.assets.preload(assets,function(){setTimeout(engine.start,200)})
 }
-
 
 window.engine = engine
