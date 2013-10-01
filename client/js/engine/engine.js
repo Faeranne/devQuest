@@ -23,7 +23,6 @@ engine.start = function(){
 };
 
 engine.fullscreen = function(){
-  engine.setFullscreen('canvas');
   window.addEventListener('touchstart', engine.mobile.startTouch, false);
   window.addEventListener('touchmove', engine.mobile.moveTouch, false);
   window.addEventListener('touchcancel', engine.mobile.stopTouch, false);
@@ -31,6 +30,7 @@ engine.fullscreen = function(){
   window.addEventListener('touchleave', engine.mobile.stopTouch, false);
   window.setInterval(engine.mobile.draw,50);
   engine.canvas.className = 'fullscreen'
+  engine.setFullscreen('canvas');
 }
 
 engine.nextLevel = function(){

@@ -17,8 +17,9 @@ engine.setFullscreen = function(id){
   var elem = document.getElementById(id);
   if(elem.requestFullscreen){
     elem.requestFullscreen();
-  }else if(elem.mozRequestFullscreen){
-    elem.mozRequestFullscreen();
+  }else if(elem.mozRequestFullScreen){
+    elem = document.getElementById('wrapper')
+    console.log(elem.mozRequestFullScreen());
   }else if(elem.webkitRequestFullscreen){
     elem.webkitRequestFullscreen();
   }
