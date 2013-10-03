@@ -11,7 +11,7 @@
  </layer>
  <layer name="Tile Layer 2" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztlVEOwCAIQ80S73/lZf+ipa1uyXiJfxQQAVsr/siVPK6YjEbNI9L1gf/INpvDyo6thcNmpFHyRbRKD83ehNEpcRGffeKPfUNUx9Yqk8sJvdovb92XBZ2hqLfcsd27H417isw8uf/E3Xtr5Zs9Dzv6ryiKb3ADNsoAxQ==
+   eJztlcEKwCAMQ2Ug7P+/eOywm9U0qU6wD3prmqKtlpKcyOWMKE9Go/Zh6WqjvpXr7WGUx55FRE5Lo/SLaJUZ6t0Jo1N8kZq1U4+9Q1THnhXSyy3qV+g+7R++CugOWbMV7R399qO+q/DsU/SfOPvdGtVm42XG/CVJsgcPdeoAzQ==
   </data>
  </layer>
  <objectgroup name="rocks" width="30" height="30">
