@@ -1,7 +1,12 @@
-window.engine = window.engine ? {}
+root = window ? exports
+root.engine = root.engine ? {}
 class Entity
   constructor: (@engine) ->
-    
+    @x = 0
+    @y = 0   
+    @frames = {}
+    @scripts = {}
+    @animations = {}
   setXY: (x,y) ->
     @x = x;
     @y = y;
@@ -59,5 +64,5 @@ class Entity
     @setXY(object.x,object.y)
     if(object.initFrame) then @setCurrentFrame(object.initFrame)
     
-window.engine.Entity = Entity
+root.engine.Entity = Entity
 
