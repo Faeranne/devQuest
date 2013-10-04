@@ -1,5 +1,9 @@
-var data = require('./premap1')
-console.log(data)
+process.argv.forEach(function(file){
+var lentest = file.split('.')
+if(file.split('.')[lentest.length-1]!='json'){return}
+console.log('loading json/'+file)
+var data = require('./json/'+file)
+console.log('processing '+file)
 var newdata = {}
 newdata.tiles = [[]]
 tmp=[]
@@ -50,7 +54,6 @@ data.layers.forEach(function(item){
         }
         item.objects.forEach(function(object){
           if((object.x/32)==i && (object.y/32)==(j+1)){
-            console.log(item.properties)
             for(key in item.properties){
               tmp2[j][i][key]=item.properties[key]
             }
@@ -68,4 +71,8 @@ data.layers.forEach(function(item){
 newdata.tiles=tmp
 newdata.objects=tmp2
 var fs = require('fs')
-fs.writeFileSync('map1.json',JSON.stringify(newdata))
+console.log('writing to output/'+file)
+fs.writeFileSync('output/'+file,JSON.stringify(newdata))
+console.log('finished '+file)
+})
+console.log('done')
