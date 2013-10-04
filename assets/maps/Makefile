@@ -1,4 +1,4 @@
-SOURCES := $(shell ls input)
+SOURCES := $(shell ls json)
 
 build:
 	node rewrite $(SOURCES)

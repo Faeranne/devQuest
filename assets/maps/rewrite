@@ -1,8 +1,8 @@
 process.argv.forEach(function(file){
 var lentest = file.split('.')
 if(file.split('.')[lentest.length-1]!='json'){return}
-console.log('loading input/'+file)
-var data = require('./input/'+file)
+console.log('loading json/'+file)
+var data = require('./json/'+file)
 console.log('processing '+file)
 var newdata = {}
 newdata.tiles = [[]]

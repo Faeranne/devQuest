@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="35" height="35" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="36" height="35" tilewidth="32" tileheight="32">
  <properties>
   <property name="blank" value="3"/>
  </properties>
  <tileset firstgid="1" source="../images/maps/tile_set.tsx"/>
- <layer name="Tile Layer 1" width="35" height="35">
+ <layer name="Tile Layer 1" width="36" height="35">
   <data encoding="base64" compression="zlib">
-   eJzt0kEKgEAMQ9HKgPc/svtBsbFNWyGLv85bZJnZUirYATbFwbRlWDJc2Y6Ih2VBPUwH6pliqXBMs3ic3Q5Zei3nVud//25heHYHYsn03DlQS9TzZPhqQXrbrrQgHrbDa6lwKKWU8ncBW3ULyg==
+   eJzt00EKACEMQ9GK4P2PPHsZ0bZpLZLFX+dt0kWkMwauKatkifYhPCgb2uI1RXkspkiLxVTJk2HZeZrke069tx301PGMqdsfe8UTYZotWg/S9GexeLymlcPj0bTbz/ZoTBmWU0+WhTHGGL4P3zMMKQ==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="35" height="35">
+ <layer name="Tile Layer 2" width="36" height="35">
   <data encoding="base64" compression="zlib">
-   eJztlksKACEMQ2XA+1959oPV9BdhyAN3TQ3VascQIs/jXJ0+IpoOb1auudjTiq3wddJGaxYhcz6VeZF8nTX3esmA6pG4udEi+kovp76pglX/7lys9+0GaD9b97ealR/G/4d6uYmntxnzQ/f768U7S33rwrrjQgghxJ95AWFbAMU=
+   eJztlksOgDAIRBuT3v/KxqUGbAcYdDEv6Y7PpEDLGELUc4CHrSXiw9LnxZtGXs+2StvKP3p3UTK1YsTN5s3ER+3ZvYDazhffHf9qPat5qqSzFux4nW/gV+zOutfTDCxNXX+mxd9qdoHMfdfuwX6nI6D72PN+OvteCCGEEHdOpxcAxQ==
   </data>
  </layer>
- <objectgroup name="rocks" width="35" height="35">
+ <objectgroup name="rocks" width="36" height="35">
   <properties>
    <property name="block" value="true"/>
   </properties>
@@ -103,7 +103,7 @@
   <object gid="7" x="576" y="448"/>
   <object gid="7" x="576" y="480"/>
  </objectgroup>
- <objectgroup name="Signs" width="35" height="35">
+ <objectgroup name="Signs" width="36" height="35">
   <properties>
    <property name="block" value="true"/>
    <property name="toCall" value="tell"/>
@@ -144,7 +144,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Whisper" width="35" height="35">
+ <objectgroup name="Whisper" width="36" height="35">
   <properties>
    <property name="toCall" value="tell"/>
   </properties>
@@ -164,7 +164,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Water" width="35" height="35">
+ <objectgroup name="Water" width="36" height="35">
   <properties>
    <property name="block" value="true"/>
    <property name="text" value="You can't swim yet!"/>
@@ -194,45 +194,45 @@
   <object gid="7" x="896" y="384"/>
   <object gid="7" x="928" y="384"/>
  </objectgroup>
- <objectgroup name="special rock" width="35" height="35"/>
- <objectgroup name="transition" width="35" height="35">
+ <objectgroup name="special rock" width="36" height="35"/>
+ <objectgroup name="transition" width="36" height="35">
   <properties>
-   <property name="beforeStep" value="transition"/>
+   <property name="afterStep" value="transition"/>
   </properties>
-  <object gid="7" x="928" y="416">
+  <object gid="7" x="992" y="416">
    <properties>
     <property name="direction" value="right"/>
     <property name="map" value="map2"/>
-    <property name="x" value="-4"/>
+    <property name="x" value="2"/>
     <property name="y" value="12"/>
    </properties>
   </object>
-  <object gid="7" x="928" y="448">
+  <object gid="7" x="992" y="448">
    <properties>
     <property name="direction" value="right"/>
     <property name="map" value="map2"/>
-    <property name="x" value="-4"/>
+    <property name="x" value="2"/>
     <property name="y" value="13"/>
    </properties>
   </object>
-  <object gid="7" x="928" y="480">
+  <object gid="7" x="992" y="480">
    <properties>
     <property name="direction" value="right"/>
     <property name="map" value="map2"/>
-    <property name="x" value="-4"/>
+    <property name="x" value="2"/>
     <property name="y" value="14"/>
    </properties>
   </object>
-  <object gid="7" x="928" y="512">
+  <object gid="7" x="992" y="512">
    <properties>
     <property name="direction" value="right"/>
     <property name="map" value="map2"/>
-    <property name="x" value="-4"/>
+    <property name="x" value="2"/>
     <property name="y" value="15"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="stepable" width="35" height="35">
+ <objectgroup name="stepable" width="36" height="35">
   <object gid="7" x="448" y="672">
    <properties>
     <property name="afterStep" value="tell"/>

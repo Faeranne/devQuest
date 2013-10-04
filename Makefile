@@ -5,16 +5,19 @@ clean: js-clean data-clean
 test: js-test
 
 js-build:
-	$(MAKE) build -C js
+	$(MAKE) build -C client/js
 
 data-build:
-	$(MAKE) build -C data
+	$(MAKE) build -C assets/maps 
 
 js-clean:
-	$(MAKE) clean -C js
+	$(MAKE) clean -C client/js
 
 data-clean:
-	$(MAKE) clean -C data
+	$(MAKE) clean -C assets/maps
 
 js-test:
-	$(MAKE) test -C js
+	$(MAKE) test -C client/js
+
+devserver:
+	cd client && python -m SimpleHTTPServer

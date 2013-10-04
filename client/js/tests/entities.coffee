@@ -44,3 +44,6 @@ describe 'An entity', ->
     entity1.addFrame 'test_id1','[Frame Object]'
     entity1.setCurrentFrame 'test_id1'
     entity1.currentFrame.should.equal 'test_id1'
+  it 'should modify x and y with move(dir)' ->
+    entity1 = new engine.Entity engine
+    
