@@ -1,0 +1,14 @@
+{
+  "images": [
+    {
+      "id":"island_tiles",
+      "src":"data/tiles/img/island.png"
+    }
+  ],
+  "maps": [
+    {
+      "id":"island1",
+      "src":"data/maps/map1.json"
+    }
+  ]
+}

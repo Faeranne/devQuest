@@ -1,0 +1,9 @@
+{
+  "imageId":"island_TS"
+  "tiles":{
+    "grass":{
+      "x":0,
+      "y":0,
+      "w":32,
+      "h":32
+    }

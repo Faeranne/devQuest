@@ -14,13 +14,16 @@ map.width=data.width
 map.height=data.height
 data.layers.forEach(function(item){
   if(item.type=="tilelayer"){
+    if(!tmp[k]){
+      tmp[k]=[]
+    }
     for(var j=0;j<map.height;j++){
-      if(!tmp[j]){
-        tmp[j]=[]
+      if(!tmp[k][j]){
+        tmp[k][j]=[]
       }
       for(var i=0;i<map.width;i++){
-        if(!tmp[j][i]){
-          tmp[j][i]=[]
+        if(!tmp[k][j][i]){
+          tmp[k][j][i]=[]
         }
         var test = item.data[i+(j*map.width)]
         var tile = ' '
@@ -39,7 +42,7 @@ data.layers.forEach(function(item){
         if(test==6){
           tile='sand'
         }
-        tmp[j][i][k]=tile
+        tmp[k][j][i]=tile
       }
     }
     k++
@@ -68,7 +71,7 @@ data.layers.forEach(function(item){
   }
 	
 })
-newdata.tiles=tmp
+newdata.bottomLayer=tmp
 newdata.objects=tmp2
 var fs = require('fs')
 console.log('writing to output/'+file)

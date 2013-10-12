@@ -21,3 +21,6 @@ js-test:
 
 devserver:
 	cd client && python -m SimpleHTTPServer
+
+dev-js:
+	$(MAKE) dev -C client/js
