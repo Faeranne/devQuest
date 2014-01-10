@@ -22,6 +22,7 @@
   "dependencies": {
     "coffee": "0.0.1",
     "coffee-script": "~1.6.3",
-    "express": "~3.4.7"
+    "express": "~3.4.7",
+    "coffeeserve": "0.0.0"
   }
 }
