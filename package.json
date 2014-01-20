@@ -1,17 +1,17 @@
 {
-  "name": "tilejs",
+  "name": "devQuest",
   "version": "0.0.0",
-  "description": "Tile server with seperated drawing and processing systems",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
     "url": "github.com/mrmakeit/devQuest.git"
   },
   "keywords": [
-    "gameing"
+    "gaming"
   ],
   "author": "Blixa Morgan <blixa@projectmakeit.com>",
   "license": "MIT",
@@ -20,9 +20,15 @@
   },
   "homepage": "https://github.com/mrmakeit/devQuest",
   "dependencies": {
-    "coffee": "0.0.1",
     "coffee-script": "~1.6.3",
     "express": "~3.4.7",
-    "coffeeserve": "0.0.0"
+    "coffeeserve": "0.0.1",
+    "gulp-coffee": "~1.2.5",
+    "gulp": "~3.4.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-util": "~2.2.12",
+    "gulp-nodemon": "~0.1.1",
+    "mocha": "~1.17.0",
+    "gulp-mocha": "~0.4.0"
   }
 }
