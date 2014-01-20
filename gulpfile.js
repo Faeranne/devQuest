@@ -4,6 +4,7 @@ var concat = require('gulp-concat');
 var gutil = require('gulp-util');
 var mocha = require('gulp-mocha');
 var nodemon = require('gulp-nodemon');
+var browserify = require('gulp-browserify');
 
 gulp.task('default', function(){
 	gulp.run('build');
@@ -11,7 +12,7 @@ gulp.task('default', function(){
 });
 
 gulp.task('test', function(){
-	gulp.run('build');
+	gulp.run('coffee');
 	gulp.src('test/*.js')
 		.pipe(mocha({reporter: 'nyan'}))
 
@@ -23,13 +24,8 @@ gulp.task('build', function(){
 });
 
 gulp.task('scripts', function(){
-	gulp.src('app.coffee')
-		.pipe(coffee({bare: false}).on('error',gutil.log))
-		.pipe(gulp.dest('./'));
-	gulp.src('./coffee/*.coffee')
-		.pipe(coffee({bare: true}).on('error',gutil.log))
-		.pipe(concat('engine.js'))
-		.pipe(gulp.dest('./client/js/'))
+    gulp.run('coffee');
+	gulp.run('browserify');
 })
 
 gulp.task('watch', function(){
@@ -37,4 +33,18 @@ gulp.task('watch', function(){
    	gulp.watch('coffee/*.coffee', function(){
 		gulp.run('scripts');
 	});
+});
+
+gulp.task('coffee', function(){
+	gulp.src('app.coffee')
+		.pipe(coffee().on('error',gutil.log))
+		.pipe(gulp.dest('./'));
+	gulp.src('./coffee/*.coffee')
+		.pipe(coffee().on('error',gutil.log))
+		.pipe(gulp.dest('./build/js/'))
+});
+gulp.task('browserify', ['coffee'], function(){
+	gulp.src('build/js/engine.js')
+		.pipe(browserify())
+		.pipe(gulp.dest('./client/js/'))
 });
