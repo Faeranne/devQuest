@@ -2,11 +2,26 @@
 (function() {
   require('./preload');
 
+  module.exports.viewport = require('./viewport');
+
 }).call(this);
 
-},{"./preload":2}],2:[function(require,module,exports){
+},{"./preload":2,"./viewport":3}],2:[function(require,module,exports){
 (function() {
   console.log('change');
+
+}).call(this);
+
+},{}],3:[function(require,module,exports){
+(function() {
+  var viewport;
+
+  module.exports = viewport = {};
+
+  viewport.center = {
+    x: 0,
+    y: 0
+  };
 
 }).call(this);
 
