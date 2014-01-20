@@ -6,5 +6,10 @@ describe('viewport', function(){
 			assert.equal(0, viewport.center.x)
 			assert.equal(0, viewport.center.y)
 		});
+		it('should return last setCenter', function(){
+			viewport.setCenter(9,5);
+			assert.equal(9, viewport.center.x)
+			assert.equal(5, viewport.center.y)
+		})
 	});
 });

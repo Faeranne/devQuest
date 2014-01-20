@@ -23,6 +23,11 @@
     y: 0
   };
 
+  viewport.setCenter = function(x, y) {
+    viewport.center.x = x;
+    return viewport.center.y = y;
+  };
+
 }).call(this);
 
 },{}]},{},[1])

@@ -12,17 +12,16 @@ gulp.task('default', function(){
 });
 
 gulp.task('test', function(){
-	gulp.run('build');
-	gulp.run('mocha');
+	return gulp.run('mocha');
 });
 
 gulp.task('build', function(){
-	gulp.run('scripts');
+	return gulp.run('scripts');
 
 });
 
 gulp.task('scripts', function(){
-    gulp.run('coffee');
+    return gulp.run('coffee');
 	gulp.run('browserify');
 })
 
@@ -33,21 +32,21 @@ gulp.task('watch', function(){
 	});
 });
 
-gulp.task('mocha', ['build'], function(){
-	gulp.src('test/*.js')
-		.pipe(mocha({reporter: 'nyan'}))
+gulp.task('mocha', function(){
+	return gulp.src('test/*.js')
+		.pipe(mocha({reporter: 'spec'}))
 });
 
 gulp.task('coffee', function(){
 	gulp.src('app.coffee')
 		.pipe(coffee().on('error',gutil.log))
 		.pipe(gulp.dest('./'));
-	gulp.src('./coffee/*.coffee')
+	return gulp.src('./coffee/*.coffee')
 		.pipe(coffee().on('error',gutil.log))
 		.pipe(gulp.dest('./build/js/'))
 });
 gulp.task('browserify', ['coffee'], function(){
-	gulp.src('build/js/engine.js')
+	return gulp.src('build/js/engine.js')
 		.pipe(browserify())
 		.pipe(gulp.dest('./client/js/'))
 });
