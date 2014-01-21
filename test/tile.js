@@ -23,14 +23,14 @@ describe('tile', function(){
 	beforeEach(function(){
 		testTile = new tile.Tile('#test',32,32,2,2,viewport)
 	})
-	describe('create', function(){
-		it('should hold values passed to it on creation', function(){
-			assert.equal('#test', testTile.src)
-			assert.equal(32, testTile.width)
-			assert.equal(32, testTile.height)
-			assert.equal(2, testTile.sheetX)
-			assert.equal(2, testTile.sheetY)
-		})
+	it('should hold values passed to it on creation', function(){
+		assert.equal('#test', testTile.src)
+		assert.equal(32, testTile.width)
+		assert.equal(32, testTile.height)
+		assert.equal(2, testTile.sheetX)
+		assert.equal(2, testTile.sheetY)
+	})
+	describe('#draw',function(){
 		it('should call viewport.drawImage with it\'s settings when draw is called', function(){
 			testTile.draw(5,3)
 			assert.equal('#test',viewport.src)
