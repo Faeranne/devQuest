@@ -23,4 +23,9 @@
     return viewport.center.y = y + (viewport.size.height - 1) / 2;
   };
 
+  viewport.setSize = function(w, h) {
+    viewport.size.width = w;
+    return viewport.size.height = h;
+  };
+
 }).call(this);

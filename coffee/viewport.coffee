@@ -12,4 +12,7 @@ viewport.setCenter = (x,y) ->
 viewport.setCorner = (x,y) ->
 	viewport.center.x = x + (viewport.size.width-1)/2
 	viewport.center.y = y + (viewport.size.height-1)/2
+viewport.setSize = (w,h) ->
+	viewport.size.width = w
+	viewport.size.height = h
 

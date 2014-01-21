@@ -20,5 +20,10 @@ describe('viewport', function(){
 			assert.equal(3, viewport.size.width)
 			assert.equal(3, viewport.size.height)
 		})
+		it('should return return last setSize', function(){
+			viewport.setSize(5,9);
+			assert.equal(5, viewport.size.width)
+			assert.equal(9, viewport.size.height)
+		})
 	});
 });

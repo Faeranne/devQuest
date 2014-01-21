@@ -17,11 +17,10 @@ gulp.task('test', function(){
 
 gulp.task('build', function(){
 	return gulp.run('scripts');
-
 });
 
 gulp.task('scripts', function(){
-    return gulp.run('coffee');
+    gulp.run('coffee');
 	gulp.run('browserify');
 })
 
