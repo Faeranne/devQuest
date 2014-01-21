@@ -31,4 +31,12 @@
     return viewport.size.height = h;
   };
 
+  viewport.getViewportX = function(worldX) {
+    return worldX - viewport.center.x;
+  };
+
+  viewport.getViewportY = function(worldY) {
+    return worldY - viewport.center.y;
+  };
+
 }).call(this);

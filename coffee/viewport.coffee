@@ -17,4 +17,7 @@ viewport.setSize = (w,h) ->
 		throw new Error('Bad Size')
 	viewport.size.width = w
 	viewport.size.height = h
-
+viewport.getViewportX = (worldX) ->
+	return worldX - viewport.center.x
+viewport.getViewportY = (worldY) ->
+	return worldY - viewport.center.y

@@ -29,5 +29,13 @@ describe('viewport', function(){
 			assert.throws(function(){viewport.setSize(4,7)}, '/Size/');
 			assert.throws(function(){viewport.setSize(7,4)}, '/Size/');
 		})
+		it('should return a position on the viewport based on map position', function(){
+			viewport.center.x = 5
+			viewport.center.y = 5
+			viewport.size.width = 5
+			viewport.size.height = 5
+			assert.equal(-3, viewport.getViewportX(2))
+			assert.equal(-3, viewport.getViewportY(2))
+		});
 	});
 });
