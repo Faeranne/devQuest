@@ -33,7 +33,7 @@ gulp.task('watch', function(){
 
 gulp.task('mocha', function(){
 	return gulp.src('test/*.js')
-		.pipe(mocha({reporter: 'nyan'}))
+		.pipe(mocha({reporter: 'spec'}))
 });
 
 gulp.task('coffee', function(){

@@ -42,4 +42,15 @@ describe('viewport', function(){
 			assert.equal(32, viewport.tile.height);
 		});
 	});
+	describe('pixelmap', function(){
+		it('should start with 32x32 tile size', function(){
+			assert.equal(32, viewport.tile.width);
+			assert.equal(32, viewport.tile.height);
+		});
+		it('should return viewport pixels based on tile', function(){
+			viewport.tile.width = 64
+			assert.equal(128, viewport.getPixelX(1))
+			assert.equal(32, viewport.getPixelY(0))
+		});
+	});
 });

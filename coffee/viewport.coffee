@@ -24,3 +24,7 @@ viewport.getViewportX = (worldX) ->
 	return worldX - viewport.center.x
 viewport.getViewportY = (worldY) ->
 	return worldY - viewport.center.y
+viewport.getPixelX = (x) ->
+	return ((x - 1) + (viewport.size.width-1)/2)*viewport.tile.width
+viewport.getPixelY = (y) ->
+	return ((y - 1) + (viewport.size.height-1)/2)*viewport.tile.height

@@ -44,4 +44,12 @@
     return worldY - viewport.center.y;
   };
 
+  viewport.getPixelX = function(x) {
+    return ((x - 1) + (viewport.size.width - 1) / 2) * viewport.tile.width;
+  };
+
+  viewport.getPixelY = function(y) {
+    return ((y - 1) + (viewport.size.height - 1) / 2) * viewport.tile.height;
+  };
+
 }).call(this);
