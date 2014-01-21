@@ -37,5 +37,9 @@ describe('viewport', function(){
 			assert.equal(-3, viewport.getViewportX(2))
 			assert.equal(-3, viewport.getViewportY(2))
 		});
+		it('should start with 32x32 tile size', function(){
+			assert.equal(32, viewport.tile.width);
+			assert.equal(32, viewport.tile.height);
+		});
 	});
 });

@@ -28,6 +28,11 @@
     height: 3
   };
 
+  viewport.tile = {
+    width: 32,
+    height: 32
+  };
+
   viewport.setCenter = function(x, y) {
     viewport.center.x = x;
     return viewport.center.y = y;

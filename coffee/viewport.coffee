@@ -6,6 +6,9 @@ viewport.center =
 viewport.size =
 	width: 3
 	height: 3
+viewport.tile = 
+	width: 32
+	height: 32
 viewport.setCenter = (x,y) ->
 	viewport.center.x = x
 	viewport.center.y = y
