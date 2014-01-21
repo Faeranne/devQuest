@@ -11,5 +11,10 @@ describe('viewport', function(){
 			assert.equal(9, viewport.center.x)
 			assert.equal(5, viewport.center.y)
 		})
+		it('should return the center based on a corner', function(){
+			viewport.setCorner(9,5);
+			assert.equal(10, viewport.center.x)
+			assert.equal(6, viewport.center.y)
+		})
 	});
 });
