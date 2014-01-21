@@ -25,5 +25,9 @@ describe('viewport', function(){
 			assert.equal(5, viewport.size.width)
 			assert.equal(9, viewport.size.height)
 		})
+		it('should error if either setSize input is even', function(){
+			assert.throws(function(){viewport.setSize(4,7)}, '/Size/');
+			assert.throws(function(){viewport.setSize(7,4)}, '/Size/');
+		})
 	});
 });

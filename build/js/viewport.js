@@ -24,6 +24,9 @@
   };
 
   viewport.setSize = function(w, h) {
+    if (!(w % 2) || !(h % 2)) {
+      throw new Error('Bad Size');
+    }
     viewport.size.width = w;
     return viewport.size.height = h;
   };
