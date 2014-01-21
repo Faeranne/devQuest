@@ -16,5 +16,9 @@ describe('viewport', function(){
 			assert.equal(10, viewport.center.x)
 			assert.equal(6, viewport.center.y)
 		})
+		it('should start widht 3,3 size when launched', function(){
+			assert.equal(3, viewport.size.width)
+			assert.equal(3, viewport.size.height)
+		})
 	});
 });
