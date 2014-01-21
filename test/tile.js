@@ -2,8 +2,11 @@ var assert = require("assert")
 var tile = require("../build/js/tile.js")
 
 describe('tile', function(){
+	var newtile = null
+	beforeEach(function(){
+		testTile = new tile.Tile('#test',32,32,2,2,viewport)
+	})
 	describe('create', function(){
-		var newtile = null
 		var viewport = {}
 		viewport.src=""
 		viewport.sx=0
@@ -21,9 +24,6 @@ describe('tile', function(){
 			viewport.x=x
 			viewport.y=y
 		}
-		beforeEach(function(){
-			testTile = new tile.Tile('#test',32,32,2,2,viewport)
-		})
 		it('should call viewport.drawImage with it\'s settings when draw is called', function(){
 			testTile.draw(5,3)
 			assert.equal('#test',viewport.src)
