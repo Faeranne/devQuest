@@ -1,6 +1,10 @@
 (function() {
   require('./preload');
 
-  module.exports.viewport = require('./viewport');
+  window.viewport = require('./viewport');
+
+  window.tile = require('./tile');
+
+  window.actor = require('./actor');
 
 }).call(this);
