@@ -10,6 +10,10 @@
       this.image = image;
     }
 
+    Actor.prototype.setImage = function(image) {
+      return this.image = image;
+    };
+
     return Actor;
 
   })();

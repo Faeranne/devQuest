@@ -11,4 +11,10 @@ describe("Actor", function(){
 		assert.equal(3,testActor.y)
 		assert.equal('#thing',testActor.image)
 	})
+	describe('#setImage', function(){
+		it('should set the actor image',function(){
+			testActor.setImage('#newImage')
+			assert.equal('#newImage', testActor.image)
+		})
+	})
 })
