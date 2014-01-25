@@ -55,18 +55,15 @@
     	#@viewport: reference to the viewport the tile is attached to
     */
 
-    function Tile(src, width, height, sheetX, sheetY, viewport) {
-      this.src = src;
-      this.width = width;
-      this.height = height;
-      this.sheetX = sheetX;
-      this.sheetY = sheetY;
-      this.viewport = viewport;
+    function Tile(animation, x, y) {
+      this.animation = animation;
+      this.x = x;
+      this.y = y;
       this.draw = __bind(this.draw, this);
     }
 
-    Tile.prototype.draw = function(x, y) {
-      return this.viewport.drawImage(this.src, (this.sheetX - 1) * this.width, (this.sheetY - 1) * this.height, this.width, this.height, x, y);
+    Tile.prototype.draw = function() {
+      return this.animation.draw(this.x, this.y);
     };
 
     return Tile;

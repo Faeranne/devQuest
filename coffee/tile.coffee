@@ -7,8 +7,8 @@ class Tile
 	#@sheetY: y position of the tile on the spritesheet (in tiles)
 	#@viewport: reference to the viewport the tile is attached to
 	###
-	constructor: (@src, @width, @height, @sheetX, @sheetY, @viewport) ->
+	constructor: (@animation, @x, @y) ->
 	
-	draw: (x, y) =>
-		@viewport.drawImage(@src, ((@sheetX-1)*@width), ((@sheetY-1)*@height), @width, @height, x, y)
+	draw: () =>
+		@animation.draw(@x, @y)
 module.exports.Tile = Tile
