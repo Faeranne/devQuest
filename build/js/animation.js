@@ -11,7 +11,13 @@
       this.height = height;
       this.countX = countX;
       this.countY = countY;
+      this.xPlace = 0;
+      this.yPlace = 0;
     }
+
+    Animation.prototype.draw = function(x, y) {
+      return this.viewport.drawImage(this.src, this.sx + this.xPlace, this.sy + this.yPlace, this.width, this.height, x, y);
+    };
 
     return Animation;
 

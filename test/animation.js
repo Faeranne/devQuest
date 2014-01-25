@@ -32,4 +32,17 @@ describe('animaion', function(){
 		assert.equal(2, testAnimation.countX)
 		assert.equal(2, testAnimation.countY)
 	})
+	describe('#draw', function(){
+		it('should send current frame to viewport.drawimage', function(){
+			testAnimation.draw(2,3)
+			assert.equal(2, viewport.x)
+			assert.equal(3, viewport.y)
+			assert.equal('#image', viewport.src)
+			assert.equal(32, viewport.width)
+			assert.equal(32, viewport.height)
+			assert.equal(1, viewport.sx)
+			assert.equal(1, viewport.sy)
+		})
+	})
+
 })
