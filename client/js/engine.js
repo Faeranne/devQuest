@@ -47,11 +47,7 @@
 
   Tile = (function() {
     /*
-    	#@src: image-like object to source the spritesheet from
-    	#@width: width of the tile.
-    	#@height: height of the tile.
-    	#@sheetX: x position of the tile on the spritesheet (in tiles)
-    	#@sheetY: y position of the tile on the spritesheet (in tiles)
+    	#@animation: animation object.
     	#@viewport: reference to the viewport the tile is attached to
     */
 
@@ -76,58 +72,41 @@
 
 },{}],5:[function(require,module,exports){
 (function() {
-  var viewport;
+  var Viewport;
 
-  module.exports = viewport = {};
-
-  viewport.center = {
-    x: 0,
-    y: 0
-  };
-
-  viewport.size = {
-    width: 3,
-    height: 3
-  };
-
-  viewport.tile = {
-    width: 32,
-    height: 32
-  };
-
-  viewport.setCenter = function(x, y) {
-    viewport.center.x = x;
-    return viewport.center.y = y;
-  };
-
-  viewport.setCorner = function(x, y) {
-    viewport.center.x = x + (viewport.size.width - 1) / 2;
-    return viewport.center.y = y + (viewport.size.height - 1) / 2;
-  };
-
-  viewport.setSize = function(w, h) {
-    if (!(w % 2) || !(h % 2)) {
-      throw new Error('Bad Size');
+  Viewport = (function() {
+    function Viewport(x, y, width, height, dom) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
     }
-    viewport.size.width = w;
-    return viewport.size.height = h;
-  };
 
-  viewport.getViewportX = function(worldX) {
-    return worldX - viewport.center.x;
-  };
+    Viewport.prototype.move = function(x, y) {
+      this.x += x;
+      return this.y += y;
+    };
 
-  viewport.getViewportY = function(worldY) {
-    return worldY - viewport.center.y;
-  };
+    Viewport.prototype.set = function(x, y) {
+      this.x = x;
+      return this.y = y;
+    };
 
-  viewport.getPixelX = function(x) {
-    return ((x - 1) + (viewport.size.width - 1) / 2) * viewport.tile.width;
-  };
+    Viewport.prototype.drawImage = function(src, x, y) {
+      if (x > this.x && x < this.x + this.width) {
+        if (y > this.y && y < this.y + this.height) {
+          return this.canvas.drawImage(src.x, src.y, src.w, src.h, x - this.x, y - this.y, src.w, src.h);
+        }
+      }
+    };
 
-  viewport.getPixelY = function(y) {
-    return ((y - 1) + (viewport.size.height - 1) / 2) * viewport.tile.height;
-  };
+    Viewport.prototype.drawViewport = function(src, x, y) {
+      return this.canvas.drawImage(src.x, src.y, src.w, src.h, x, y, src.w, src.h);
+    };
+
+    return Viewport;
+
+  })();
 
 }).call(this);
 

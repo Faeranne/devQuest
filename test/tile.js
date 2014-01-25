@@ -18,7 +18,7 @@ describe('tile', function(){
 		assert.equal(2, testTile.y)
 	})
 	describe('#draw',function(){
-		it('should call animation.draw with it\'s settings when draw is called', function(){
+		it('should call animation.draw with with it\'s passed variable', function(){
 			testTile.draw()
 			assert.equal(2,animation.x)
 			assert.equal(2,animation.y)
