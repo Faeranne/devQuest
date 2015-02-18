@@ -1,5 +1,7 @@
 .c9revisions/
 /node_modules/
 
+/build/
+/coverage/
 
 .*.swp
