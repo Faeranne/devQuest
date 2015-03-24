@@ -1,0 +1,6 @@
+{
+	"name": "devQuest",
+	"dependencies":{
+		"underscore":"*"
+	}
+}

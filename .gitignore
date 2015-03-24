@@ -1,5 +1,7 @@
 .c9revisions/
 /node_modules/
+/bower_components/
+/lib
 
 /build/
 /coverage/

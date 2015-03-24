@@ -4,40 +4,42 @@ istanbul = require 'gulp-coffee-istanbul'
 coveralls = require 'gulp-coveralls'
 coffeelint = require 'gulp-coffeelint'
 coffee = require 'gulp-coffee'
-server = require 'gulp-express'
+nodemon = require 'gulp-nodemon'
 livereload = require 'gulp-livereload'
 cached = require 'gulp-cached'
 coffeeify = require 'gulp-coffeeify'
+bowerFiles = require 'main-bower-files'
 
 gulp.task 'default', ['test', 'lint', 'build', 'watch', 'run']
 
 gulp.task 'watch', ['build', 'test', 'lint'], ->
-	livereload.listen
-		port: 8000
+	livereload.listen()
 	gulp.watch 'src/**/*.coffee', ['test', 'lint', 'build']
 
 gulp.task 'run', ['watch'], ->
-	server.run
-		file: 'build/server/app.js'
-	gulp.watch 'build/server/**/*.js', ()->
-		server.run
-			file: 'build/server/app.js'
+	nodemon
+		script: 'build/server/app.js'
+		watch: 'build/server'
 
-gulp.task 'build', ['coffee', 'browserify']
+gulp.task 'build', ['coffee', 'browserify', 'bower']
 
-gulp.task 'browserify', ->
+gulp.task 'browserify', ['coffee'], ->
 	gulp.src 'src/client/**/*.coffee'
 		.pipe coffeeify()
 		.pipe gulp.dest './build/client/'
+	
+gulp.task 'bower', ->
+	gulp.src bowerFiles()
+		.pipe gulp.dest "./lib"
 
-gulp.task 'coffee', ->
+gulp.task 'coffee', ['bower'], ->
 	gulp.src 'src/**/*.coffee'
 		.pipe cached 'build'
 		.pipe coffee()
 		.pipe gulp.dest 'build'
 		.pipe livereload()
 
-gulp.task 'test', (done) ->
+gulp.task 'test', ['build'], (done) ->
 	gulp.src 'src/**/*.coffee'
 		.pipe cached 'test'
 		.pipe istanbul

@@ -1,24 +1,11 @@
-Preloader = (srcs) ->
-	@toLoad = srcs.length
-	@ready = false
-	@parts = {}
-	for src in srcs
-		@load src
-	return @
-		
+Preloader = {}
 
-Preloader.prototype =
-	load: (src) ->
-		self = @
-		@parts[src].loading = true
-		req = new XMLHttpRequest()
-		req.onload = ->
-			self.parts[src].content = @.responseText
-			self.parts[src].loaded = true
-			self.loaded = self.loaded + 1
-			if self.loaded >= self.toLoad
-				self.ready = true
-		req.open 'get', src, true
-		req.send()
-	
+Preloader.loadItem = (src,onLoad) ->
+	loadImage = (src) ->
+		return
+	loadJson = (src) ->
+		return
+	loadOther = (src) ->
+		return
+	return true
 module.exports = Preloader

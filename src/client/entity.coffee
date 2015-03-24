@@ -1,5 +1,3 @@
-Entity = (tileSet, x, y, width, height) ->
-	
-	return @
+Entity = () ->
 
 module.exports = Entity
