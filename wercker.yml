@@ -7,7 +7,7 @@ build:
             code: ./node_modules/.bin/bower install
         - script:
             name: gulp-build
-            code: ./node_modules/.bin/gulp
+            code: ./node_modules/.bin/gulp build
         - script:
             name: gulp-test
             code: ./node_modules/.bin/gulp test
