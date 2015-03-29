@@ -3,8 +3,11 @@ build:
     steps:
         - npm-install
         - script:
+            name: bower-install
+            code: ./node_modules/.bin/bower install
+        - script:
             name: gulp-build
-            code: ./node_modules/.bin/gulp build
+            code: ./node_modules/.bin/gulp
         - script:
             name: gulp-test
             code: ./node_modules/.bin/gulp test
